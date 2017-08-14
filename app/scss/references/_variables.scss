@@ -1,0 +1,85 @@
+/*****
+Reference to SMACSS - http://smacss.com/
+
+NAMING CONVENTIONS:
+c- : Color,
+l- : Layout,
+m- : Module,
+f- : Form,
+e- : Element,
+*****/
+
+//COLOURS
+$c-title: #009fdf;
+$c-bodytext:#65665c;
+
+$c-white: #ffffff;
+$c-black: #000000;
+
+$c-lightgrey: #F3F3F2;
+
+$c-errorred: #ff0808;
+
+//OE brand colours
+$c-corporateblue: #0033a0;
+$c-cyan: #009fdf;
+$c-iceblue: #59cbe8;
+
+$c-emerald: #64a70b;
+$c-lime: #b5bd00;
+
+$c-hazel: #836924;
+$c-brown: #623412;
+
+$c-grey: #919d9d;
+$c-darkgrey: #65665c;
+
+
+//breakpoints
+$screen-xxs: 400px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+$screen-xl: 1450px;
+
+.container {
+  width: auto;
+  display: table;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+@media (min-width: $screen-sm) {
+	.container {
+		width: 718px;
+	}
+}
+
+@media (min-width: $screen-md) {
+	.container {
+		width: 942px;
+	}
+}
+
+@media (min-width: $screen-lg) {
+	.container {
+		width: 1150px;
+	}
+}
+
+@media (min-width: $screen-xl) {
+	.container {
+		width: 1400px;
+	}
+}
+
+@media (max-width: $screen-xxs){
+	.col-xxs-12 {
+		float: none;
+		width: 100%;
+	}
+	.hidden-xxs {
+		display: none!important;
+	}
+}
