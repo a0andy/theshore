@@ -10,30 +10,19 @@ e- : Element,
 *****/
 
 //COLOURS
-$c-title: #009fdf;
-$c-bodytext:#65665c;
+$c-title: #b18a2e;
+$c-bodytext:#525252;
 
 $c-white: #ffffff;
 $c-black: #000000;
 
-$c-lightgrey: #F3F3F2;
+$c-lightgrey: #f1f1ee;
+
+$c-gold: #b18a2e;
+
+$c-darkblue: #014d66;
 
 $c-errorred: #ff0808;
-
-//OE brand colours
-$c-corporateblue: #0033a0;
-$c-cyan: #009fdf;
-$c-iceblue: #59cbe8;
-
-$c-emerald: #64a70b;
-$c-lime: #b5bd00;
-
-$c-hazel: #836924;
-$c-brown: #623412;
-
-$c-grey: #919d9d;
-$c-darkgrey: #65665c;
-
 
 //breakpoints
 $screen-xxs: 400px;
@@ -46,31 +35,31 @@ $screen-xl: 1450px;
   width: auto;
   display: table;
   margin: 0 auto;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 @media (min-width: $screen-sm) {
 	.container {
-		width: 718px;
+		width: 687px;
 	}
 }
 
 @media (min-width: $screen-md) {
 	.container {
-		width: 942px;
+		width: 912px;
 	}
 }
 
 @media (min-width: $screen-lg) {
 	.container {
-		width: 1150px;
+		width: 1120px;
 	}
 }
 
 @media (min-width: $screen-xl) {
 	.container {
-		width: 1400px;
+		width: 1380px;
 	}
 }
 

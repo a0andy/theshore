@@ -40,45 +40,67 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
 	color: $c-title;
 	margin: 0 0 15px;
 	font-family: $title-font;
-	font-weight: 600;
+	font-weight: 400;
 }
 
 h1, .h1 {
-	@include font-size(2.6, 3.2);
+	@include font-size(5.0, 6.0);
 }
 h2, .h2 {
-	@include font-size(2.4, 3.0);
+	@include font-size(3.0, 4.0);
 }
 h3, .h3 {
-	@include font-size(2.0, 2.4);
+	@include font-size(2.5, 3.5);
 }
 h4, .h4 {
-	@include font-size(1.8, 2.2);
+	@include font-size(2.0, 3.0);
 }
 
 p,
 body,
 ul li,
 ol li {
-	@include font-size(1.6, 2.2);
+	@include font-size(1.3, 2.3);
 	color: $c-bodytext;
 	font-family: $body-font;
 }
 
 p {
 	margin: 0 0 15px;
+	font-weight: 600;
 
 	&.preamble, .preamble {
-		@include font-size(2.0, 2.6);
+		@include font-size(2.0, 3.0);
 		@include font-smoothing;
+	}
+
+	strong {
+		font-weight: 800;
 	}
 }
 
-ul, ol {
+ol {
+	margin: 15px 0 15px 17px;
 }
 
 ul {
-	list-style:disc;
+	list-style:none;
+	margin: 15px 0;
+
+	li {
+		position: relative;
+
+		&:before {
+			content:'';
+			background: $c-gold;
+			width: 5px;
+			height: 5px;
+			vertical-align: middle;
+			margin-right: 5px;
+			@include border-radius(5px);
+			display: inline-block;
+		}
+	}
 }
 
 ol {
@@ -96,48 +118,22 @@ em {
 // -------------------------------
 @media (min-width:$screen-sm){
 	h1, .h1 {
-		@include font-size(3.2, 4.0);
+		@include font-size(6.0, 7.0);
 	}
 	h2, .h2 {
-		@include font-size(2.8, 3.4);
+		@include font-size(4.0, 5.0);
 	}
 	h3, .h3 {
-		@include font-size(2.2, 2.6);
+		@include font-size(3.0, 4.0);
 	}
 	h4, .h4 {
-		@include font-size(2.0, 2.4);
-	}
-}
-
-@media (min-width: $screen-md) {
-	// h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-	// 	margin: 0 0 15px;
-	// }
-
-	h1, .h1 {
-		@include font-size(3.6, 4.2);
-	}
-	h2, .h2 {
-		@include font-size(3.0, 3.6);
-	}
-	h3, .h3 {
-		@include font-size(2.4, 2.8);
-	}
-	h4, .h4 {
-		@include font-size(2.0, 2.4);
-	}
-
-	p {
-		&.preamble, .preamble {
-			@include font-size(2.4, 3.0);
-			@include font-smoothing;
-		}
+		@include font-size(2.5, 3.5);
 	}
 
 	p,
 	body,
 	ul li,
 	ol li {
-		@include font-size(1.8, 2.6);
+		@include font-size(1.6, 2.6);
 	}
 }
