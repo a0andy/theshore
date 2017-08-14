@@ -25,8 +25,16 @@ nav {
     border-bottom: 1px solid #d9d6d6;
     background: $c-white;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &.title {
       color: $c-black;
+
+      &:hover {
+        cursor: normal;
+      }
     }
   }
 
@@ -64,6 +72,10 @@ nav {
         @include font-size(1.2, 1.2);
         letter-spacing: 2px;
         width: 100%;
+
+        &:after {
+          display: none;
+        }
       }
     }
   }
