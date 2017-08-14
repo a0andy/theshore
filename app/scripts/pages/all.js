@@ -1,8 +1,13 @@
 (function($, window, document) {
 
   function mainnav() {
-    $('.menu').on('click', function() {
-      $(this).children().toggleClass('open');
+    $('header').on('click', function() {
+      $('header, nav').stop().toggleClass('open');
+    });
+
+    $('nav p').on('click', function() {
+      $('.sub').stop().slideUp();
+        $(this).next('.sub').stop().slideToggle();
     });
   }
 

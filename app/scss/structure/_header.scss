@@ -1,48 +1,16 @@
 header {
   position: fixed;
+  width: 100%;
+  @include clearfix();
+  @include transition(all 0.4s ease-in-out);
 
-  .headerbuttons {
-    font-size: 0;
+  &.open {
+    margin-left: 200px;
+    margin-left: calc(100% - 124px);
 
-    .reservationbtn {
-      display: none;
-    }
-
-    .calendar {
-      background: $c-gold;
-      width: 62px;
-      height: 47px;
-      display: inline-block;
-      vertical-align: top;
-      position: relative;
-
-      img {
-        @include centre(both);
-        height: 20px;
-      }
-    }
-
-    .menu {
-      display: inline-block;
-      padding: 12px 16px;
-      cursor: pointer;
-      background: $c-white;
-      vertical-align: top;
-
-      p {
-        display: none;
-      }
-
-      .menu-burger {
-        vertical-align: middle;
-        width: 30px;
-        height: 16px;
-        position: relative;
-        @include transform(rotate(0deg));
-        @include transition(all 0.3s ease-in-out)
-        display: inline-block;
-
-        &.open {
+    .headerbuttons {
+      .menu {
+        .menu-burger {
           span {
             &:nth-child(1), &:nth-child(6) {
               @include transform(rotate(45deg));
@@ -85,6 +53,53 @@ header {
             }
           }
         }
+      }
+    }
+
+  }
+
+  .headerbuttons {
+    font-size: 0;
+    display: inline-block;
+    float: left;
+
+    .reservationbtn {
+      display: none;
+    }
+
+    .calendar {
+      background: $c-gold;
+      width: 62px;
+      height: 44px;
+      display: inline-block;
+      vertical-align: top;
+      position: relative;
+
+      img {
+        @include centre(both);
+        height: 20px;
+      }
+    }
+
+    .menu {
+      display: inline-block;
+      padding: 10.5px 16px;
+      cursor: pointer;
+      background: $c-white;
+      vertical-align: top;
+
+      p {
+        display: none;
+      }
+
+      .menu-burger {
+        vertical-align: middle;
+        width: 30px;
+        height: 16px;
+        position: relative;
+        @include transform(rotate(0deg));
+        @include transition(all 0.3s ease-in-out)
+        display: inline-block;
 
         span {
           display: block;
@@ -122,7 +137,51 @@ header {
     }
   }
 
+  .headerlinks {
+    float: right;
+    margin: 15px 22px 0 0;
+    display: inline-block;
+
+    a {
+      border: none;
+      margin-left: 20px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 450px) {
+    &.open {
+      margin-left: 300px;
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .headerbuttons {
+      .calendar {
+        height: 44px;
+      }
+
+      .menu {
+        padding: 9px 16px;
+      }
+    }
+  }
+
   @media (min-width: $screen-md) {
+    &.open {
+      margin-left: 0;
+
+      .headerbuttons {
+        .menu {
+          background: rgba(255, 255, 255, 0.9);
+        }
+      }
+    }
+
     .headerbuttons {
 
       .menu {
@@ -131,14 +190,13 @@ header {
         p {
           display: inline-block;
           vertical-align: middle;
-          margin: 0 0 0 12px;
           text-transform: uppercase;
           letter-spacing: 2px;
           font-weight: 800;
           @include font-size(1.2, 1.2);
+          margin: 0 0 0 12px;
         }
       }
-
 
       .calendar {
         display: none;
@@ -152,11 +210,11 @@ header {
         @include font-size(1.2, 1.2);
         background: $c-gold;
         color: $c-white;
-        border: 3px solid $c-gold;
+        border: 2px solid $c-gold;
         min-width: 200px;
         text-align: center;
         vertical-align: middle;
-        padding: 16px 10px;
+        padding: 17px 10px;
         position: relative;
         z-index: 1;
         @include transition(all 0.3s ease-in-out);
@@ -177,6 +235,31 @@ header {
 
           &:after {
             width: 100%;
+          }
+        }
+      }
+    }
+
+    .headerlinks {
+      margin-right: 45px;
+
+      a {
+        margin-left: 25px;
+
+        &:after {
+          display: none;
+        }
+
+        svg {
+          width: 30px;
+          height: 30px;
+          @include transition(all 0.3s ease-in-out);
+          fill: $c-white;
+        }
+
+        &:hover {
+          svg {
+            fill: $c-gold;
           }
         }
       }
