@@ -2,9 +2,8 @@
 
   function ctascroll() {
     $(".m-videobanner .bannercta").click(function() {
-      console.log($(".m-videobanner").outerHeight());
       $('html, body').animate({
-          scrollTop: $(".m-videobanner").outerHeight(),
+          scrollTop: $(".m-videobanner").outerHeight() - 40,
       }, 1500);
     });
   }

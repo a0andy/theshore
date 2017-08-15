@@ -1,10 +1,15 @@
+@mixin smalltext() {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  @include font-size(1.2, 2.2);
+  font-weight: 800;
+}
+
 @mixin grid($xs, $sm, $md, $lg) {
   width: percentage($xs / 12);
   float: left;
   position: relative;
   min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
 
   @media (min-width: $screen-sm) {
     width: percentage($sm / 12);
