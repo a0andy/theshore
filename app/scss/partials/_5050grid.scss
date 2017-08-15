@@ -1,14 +1,34 @@
 .m-5050grid {
+  margin-top: 80px;
+
   .block5050 {
-    padding: 40px 0;
+    padding: 0 0 80px;
     background: #f1f1ee;
     @include clearfix;
 
+    &.noimage {
+      .text {
+        width: 100%!important;
+        max-width: 1200px;
+
+        .text-inner {
+          margin: 0!important;
+        }
+      }
+
+      .image {
+        display: none;
+      }
+    }
+
     &.reversed {
       background: $c-white;
+      padding-top: 0;
+      padding-bottom: 40px;
 
       .image {
         float: left;
+        position: relative;
       }
     }
 
@@ -32,6 +52,7 @@
       @include grid(12, 12, 6, 7);
       float: right;
       margin-bottom: 20px;
+      margin-top: -50px;
     }
   }
 
@@ -52,13 +73,13 @@
   }
 
   @media (min-width: $screen-md) {
-    margin-top: 80px;
+    margin-top: 90px;
 
     .block5050 {
-      padding: 0 0 60px;
+      padding: 0 0 90px;
 
       &.reversed {
-        padding: 0 0 40px;
+        padding: 0 0 60px;
 
         .image {
 
@@ -78,8 +99,7 @@
 
       .image {
         margin-bottom: 0;
-        position: relative;
-        top: -30px;
+        margin-top: -30px;
 
         img {
           max-width: 100%;
@@ -87,7 +107,7 @@
       }
 
       .text {
-        padding-top: 40px;
+        padding-top: 50px;
 
         .text-inner {
           margin-right: 70px;

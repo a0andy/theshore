@@ -16,6 +16,7 @@ header {
 
   &.scroll {
     background: $c-white;
+    box-shadow: 0 1px 10px $c-grey;
 
     .logo {
       svg {
