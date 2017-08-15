@@ -1,0 +1,81 @@
+@keyframes icon {
+    0% {top:0;}
+    10% {top:5px;}
+    20% {top:0;}
+}
+
+.m-videobanner {
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 5000px;
+  position: relative;
+
+  .logo {
+    svg {
+      @include centre(x);
+      z-index: 2;
+      top: 50px;
+      fill: $c-white;
+      width: 255px;
+      height: 140px;
+    }
+  }
+
+  img {
+    @include image-cover();
+  }
+
+  video {
+    position: absolute;
+    display: none;
+  }
+
+  .bannertext {
+    @include centre(both);
+    width: 80%;
+    width: calc(100% - 80px);
+
+    h1, h2 {
+      color: $c-white;
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  .bannercta {
+    @include centre(x);
+    bottom: 50px;
+    cursor: pointer;
+
+    p {
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      @include font-size(1.2, 2.2);
+      color: $c-white;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    svg {
+      position: relative;
+      fill: $c-white;
+      width: 30px;
+      height: 30px;
+      display: table;
+      margin: 0 auto;
+      animation-name: icon;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    video {
+      display: block;
+    }
+
+    img {
+      display: none;
+    }
+  }
+}

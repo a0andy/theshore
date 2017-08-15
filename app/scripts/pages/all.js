@@ -1,7 +1,7 @@
 (function($, window, document) {
 
   function mainnav() {
-    $('header').on('click', function() {
+    $('header .menu').on('click', function() {
       $('header, nav').stop().toggleClass('open');
     });
 
@@ -17,6 +17,17 @@
     $('html').on('click', function() {
       $('header, nav').stop().removeClass('open');
       $('.sub').stop().slideUp();
+    });
+
+    $(window).on('scroll', function() {
+      var y_scroll_pos = window.pageYOffset;
+      var scroll_pos = 5;
+
+      if(y_scroll_pos > scroll_pos) {
+        $('header').addClass('scroll');
+      } else {
+        $('header').removeClass('scroll');
+      }
     });
   }
 

@@ -5,7 +5,8 @@
 //Bootstrap Implementation
 // @import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
 
-@import 'references/*';
-@import 'basic/*';
-@import 'structure/*';
+@import 'references/**/*';
+@import 'basic/**/*';
+@import 'structure/**/*';
+@import 'partials/**/*';
 @import 'print.scss';
