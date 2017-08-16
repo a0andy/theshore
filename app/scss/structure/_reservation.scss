@@ -1,0 +1,127 @@
+.reservationform {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-width: calc(100% - 124px);
+  position: fixed;
+  top: 0;
+  left:0;
+  background: rgba(177, 138, 46, 0.8);
+  z-index: 10;
+  display: none;
+  padding: 25px 40px;
+
+  .spa, .dining, .conference {
+    display: none;
+  }
+
+  form {
+
+    select, input {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    input {
+      margin-right: 20px;
+    }
+
+    #datepicker {
+      background-image: url('../images/calendar.png');
+      background-repeat: no-repeat;
+      background-position: 94% 50%;
+    }
+
+    .extra-form {
+      button {
+        margin-top: 5px;
+        width: 100%;
+      }
+    }
+  }
+
+  @media (min-width: 450px) {
+    max-width: 300px;
+  }
+
+  @media (min-width: $screen-md) {
+    top: 50px;
+    max-width: 281px;
+  }
+}
+
+.ui-datepicker {
+  border: 2px solid $c-gold;
+  background: $c-lightgrey;
+  width: 277px;
+  padding: 15px 0;
+
+  span, a {
+    font-family: $title-font;
+    font-weight: 400;
+    border: none!important;
+    text-align: center;
+    display: block;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  span {
+    color: $c-gold;
+    font-family: $title-font;
+  }
+
+  .ui-datepicker-header {
+    padding-bottom: 15px;
+
+    a {
+      // display: inline-block;
+      // cursor: pointer;
+      // width: 50%;
+      // padding-bottom: 10px;
+      display: none;
+    }
+
+    .ui-datepicker-title {
+      padding: 0 15px;
+
+      select {
+        display: inline-block;
+        width: 50%;
+        padding: 5px 15px;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+
+    td {
+      &.ui-state-disabled {
+        span {
+          background: #e7e0da;
+        }
+      }
+
+      a, span {
+        background: $c-white;
+        margin: 2.5px;
+        color: $c-bodytext;
+        @include font-size(1.4, 1.4);
+        padding: 4px 2.5px 6px;
+        vertical-align: middle;
+        letter-spacing: 0;
+        @include transition(all 0.2s ease-in-out);
+
+        &.ui-state-highlight, &:hover {
+          background: $c-black;
+          color: $c-white;
+        }
+      }
+    }
+  }
+}

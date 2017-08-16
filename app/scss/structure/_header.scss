@@ -11,12 +11,13 @@ header {
       opacity: 0;
       @include transition(all 0.4s ease-in-out);
       height: 30px;
+      width: 65px;
     }
   }
 
   &.scroll {
     background: $c-white;
-    box-shadow: 0 1px 10px $c-grey;
+    box-shadow: 0 0px 10px $c-black;
 
     .logo {
       svg {
@@ -169,12 +170,12 @@ header {
 
   .headerlinks {
     float: right;
-    margin: 12.5px 22px 0 0;
+    margin: 12.5px 8px 0 0;
     display: inline-block;
 
     a {
       border: none;
-      margin-left: 20px;
+      margin-left: 10px;
 
       &:first-child {
         color: $c-black;
@@ -187,6 +188,16 @@ header {
       svg {
         width: 20px;
         height: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 350px) {
+    .headerlinks {
+      margin: 12.5px 22px 0 0;
+
+      a {
+        margin-left: 20px;
       }
     }
   }
@@ -227,6 +238,7 @@ header {
     .logo {
       svg {
         height: 40px;
+        width: 80px;
       }
     }
 
@@ -278,32 +290,25 @@ header {
         @include font-size(1.2, 1.2);
         background: $c-gold;
         color: $c-white;
-        border: 2px solid $c-gold;
         min-width: 200px;
         text-align: center;
         vertical-align: middle;
-        padding: 17px 10px;
+        padding: 19px 12px;
+        border: none!important;
         position: relative;
         z-index: 1;
         @include transition(all 0.3s ease-in-out);
 
         &:after {
-          position: absolute;
-          z-index: -1;
-          width: 0;
-          height: 100%;
-          bottom:0;
-          left:0;
-          background: $c-white;
-          @include transition(all 0.3s ease-in-out);
+          display: none;
         }
 
         &:hover {
-          color: $c-gold;
+          background: rgba(177, 138, 46, 0.8);
+        }
 
-          &:after {
-            width: 100%;
-          }
+        &.open {
+          background: rgba(177, 138, 46, 0.8);
         }
       }
     }

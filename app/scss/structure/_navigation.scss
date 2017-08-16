@@ -5,14 +5,10 @@ nav {
   max-width: calc(100% - 124px);
   position: fixed;
   top: 0;
-  left: -100%;
+  left:0;
   background: rgba(255, 255, 255, 0.9);
-  @include transition(all 0.4s ease-in-out);
   z-index: 10;
-
-  &.open {
-    left: 0;
-  }
+  display: none;
 
   p {
     color: $c-gold;
@@ -87,13 +83,7 @@ nav {
 
   @media (min-width: $screen-md) {
     top: 50px;
-    opacity: 0;
     max-width: 361px;
-    left: -361px;
-
-    &.open {
-      opacity: 1;
-    }
 
     p, ul {
       background: none;

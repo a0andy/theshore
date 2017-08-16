@@ -1,16 +1,36 @@
 label {
+  @include smalltext();
+  display: block;
+  color: $c-white;
+
   &.error {
     color: $c-errorred;
   }
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  background-image: url('../images/inputarrow.png');
+  background-repeat: no-repeat;
+  background-position: 94% 52%;
+}
+
 input,
-textarea {
-  @include border-radius(5px);
+textarea, select {
+  display: block;
   border: none;
-  padding: 11px 15px;
-  border: 2px solid $c-white;
+  border: 1px solid $c-gold;
+  padding: 12px 15px;
   @include transition(all 0.2s ease-in-out);
+  @include font-size(1.4, 2.4);
+  font-family: $body-font;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 
   &:focus {
     outline: 0;
@@ -37,16 +57,10 @@ textarea {
   }
 }
 
-select {
-  &:focus {
-
-  }
-
-  &.error{
-
-  }
-}
-
 button {
-
+  @include smalltext;
+  color: $c-white;
+  background: $c-darkblue;
+  border: 1px solid $c-lightgrey;
+  padding: 13px 15px;
 }
