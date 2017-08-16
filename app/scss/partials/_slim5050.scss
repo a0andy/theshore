@@ -1,0 +1,82 @@
+.m-slim5050 {
+  @include blockmargin;
+
+  .container {
+    position: relative;
+  }
+
+  .text {
+    @include grid(12, 12, 6, 5);
+    position: relative;
+
+    &:before {
+      content:'';
+      background: $c-lightgrey;
+      height: 100%;
+      width: 500%;
+      position: absolute;
+      top: -80px;
+      left: -100%;
+      z-index: -1;
+      padding: 80px 0 40px;
+    }
+
+    .text-inner {
+      .smalltext {
+        @include smalltext();
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .image {
+    @include grid(12, 12, 6, 7);
+    float: right;
+    position: relative;
+    z-index: 2;
+
+    img {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .block5050 {
+      .text {
+        .text-inner {
+          max-width: 90%;
+        }
+      }
+
+      .image {
+        img {
+          max-width: 80%;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    position: relative;
+
+    .text {
+      @include centre(y);
+
+      &:before {
+        padding: 40px 0;
+        top: -40px;
+      }
+
+      .text-inner {
+        margin-right: 70px;
+        max-width: 100%;
+      }
+    }
+
+    .image {
+      img {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

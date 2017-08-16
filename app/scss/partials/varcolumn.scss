@@ -1,7 +1,19 @@
-.m-threecol {
+.m-varcolumn {
   padding: 50px 0;
   position: relative;
   overflow: hidden;
+
+  &.twocol {
+    .item {
+      @include grid(12, 12, 6, 6);
+    }
+  }
+
+  &.fourcol {
+    .item {
+      @include grid(12, 12, 6, 3);
+    }
+  }
 
   &.blue {
     .background {
@@ -28,19 +40,13 @@
     @include grid(12, 12, 4, 4);
     margin-bottom: 50px;
 
-    &:last-child {
-      .item-inner {
-        padding-right: 0;
-      }
-    }
-
     .item-inner {
 
       .text {
         margin-top: -50px;
         margin-left: 35px;
         padding-top: 15px;
-        padding-left: 30px;
+        padding-left: 10%;
         position: relative;
 
         h2, p {
@@ -66,23 +72,16 @@
       padding-bottom: 35px;
     }
 
+    .item-container {
+      margin: 0 -50px;
+      @include clearfix();
+    }
+
     .item {
       margin-bottom: 0;
+      padding: 0 25px;
 
-      &:first-child {
-        .item-inner {
-          padding-right: 30px;
-        }
-      }
-      &:nth-child(2) {
-        .item-inner {
-          padding: 0 15px;
-        }
-      }
-      &:nth-child(3) {
-        .item-inner {
-          padding-left: 30px;
-        }
+      .item-inner {
       }
     }
   }

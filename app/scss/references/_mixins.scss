@@ -1,3 +1,11 @@
+@mixin blockmargin() {
+  margin: 50px 0;
+
+  @media (min-width: $screen-md) {
+    margin: 80px 0;
+  }
+}
+
 @mixin smalltext() {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -10,6 +18,7 @@
   float: left;
   position: relative;
   min-height: 1px;
+  box-sizing: border-box;
 
   @media (min-width: $screen-sm) {
     width: percentage($sm / 12);
