@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 
 <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="img/touch-icon-iphone-precomposed.png">
@@ -20,7 +20,41 @@
 <link href="css/styles.css" rel="stylesheet" type="text/css">
 
   </head>
-  <body>
+  <body class='hide'>
+
+    <!-- <SCRIPT>
+function passWord() {
+var testV = 1;
+var pass1 = prompt('Please Enter Your Password',' ');
+while (testV < 300) {
+if (pass1.toLowerCase() == "entertheshore") {
+alert('You Got it Right!');
+$('body').removeClass('hide');
+$('.passbtn').hide();
+break;
+} else {
+  prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+}
+testV+=1;
+var pass1 =
+prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+}
+if (pass1.toLowerCase()!="password" & testV ==3)
+return " ";
+}
+</SCRIPT>
+<div class='passbtn' style='display:table;margin:0 auto;'>
+<FORM>
+<input type="button" value="Enter Protected Area" onClick="passWord()">
+</FORM>
+</div>
+
+<style>
+body.hide section, body.hide div, body.hide header, body.hide nav, body.hide footer  {
+  display: none;
+}
+</style> -->
+
 
     <div class="container">
       <br>
@@ -73,8 +107,8 @@
 <![endif]-->
 
 <script src="bower_components/picturefill/dist/picturefill.js"></script>
+<script src="bower_components/matchHeight/jquery.matchHeight-min.js"></script>
 <!-- <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script> -->
-<!-- <script src="bower_components/matchHeight/jquery.matchHeight-min.js"></script> -->
 <!-- <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script> -->
 
 <script src="scripts/pages/all.js"></script>

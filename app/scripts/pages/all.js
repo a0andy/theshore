@@ -1,14 +1,6 @@
 (function($, window, document) {
 
   function mainnav() {
-    $( "#datepicker" ).datepicker({
-      changeMonth: true,
-      changeYear: true,
-      minDate: 0,
-      maxDate: "+6M +10D",
-      dateFormat: 'dd-mm-yy'
-    });
-
     $('header .menu').on('click', function() {
       $('.reservationform').stop().fadeOut();
       $('.reservationbtn').stop().removeClass('open');
@@ -54,7 +46,38 @@
     });
   }
 
+  function headerform() {
+    $( "#datepicker" ).datepicker({
+      changeMonth: true,
+      changeYear: true,
+      minDate: 0,
+      maxDate: "+6M +10D",
+      dateFormat: 'dd-mm-yy'
+    });
+
+    $('.reservationform .restype').on('change', function() {
+      var resType = $(".reservationform .restype option:checked").val();
+
+      if ((resType == 'wedding') || (resType == 'conferences')) {
+        $('.reservationform .extra-form').fadeIn();
+        $('.reservationform .link').hide();
+      } else {
+        $('.reservationform .link').hide();
+        $('.reservationform .extra-form').hide();
+        showbtn = '.' + resType;
+        $(showbtn).fadeIn();
+      }
+    });
+  }
+
+  function footerheight() {
+    $('footer .footeritem.toprow').matchHeight();
+    $('footer .footeritem.bottomrow').matchHeight();
+  }
+
  $(function() {
    mainnav();
+   headerform();
+   footerheight();
  });
 }(window.jQuery, window, document));
