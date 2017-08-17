@@ -19,7 +19,7 @@ select {
 }
 
 input,
-textarea, select {
+textarea, select, option {
   display: block;
   border: none;
   border: 1px solid $c-gold;
@@ -31,6 +31,11 @@ textarea, select {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  @include font-size(1.2, 2.2);
+  font-weight: 600;
+  color: $c-bodytext;
 
   &:focus {
     outline: 0;
@@ -63,4 +68,83 @@ button {
   background: $c-darkblue;
   border: 1px solid $c-lightgrey;
   padding: 13px 15px;
+  cursor: pointer;
+  @include transition(all 0.4s ease-in-out);
+}
+
+.ui-datepicker {
+  border: 2px solid $c-gold;
+  background: $c-lightgrey;
+  width: 277px;
+  padding: 15px 0;
+  display: none;
+
+  span, a {
+    font-family: $title-font;
+    font-weight: 400;
+    border: none!important;
+    text-align: center;
+    display: block;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  span {
+    color: $c-gold;
+    font-family: $title-font;
+  }
+
+  .ui-datepicker-header {
+    padding-bottom: 15px;
+
+    a {
+      // display: inline-block;
+      // cursor: pointer;
+      // width: 50%;
+      // padding-bottom: 10px;
+      display: none;
+    }
+
+    .ui-datepicker-title {
+      padding: 0 15px;
+
+      select {
+        display: inline-block;
+        width: 50%;
+        padding: 5px 15px;
+      }
+    }
+  }
+
+  table {
+    width: 100%;
+    width: calc(100% - 30px);
+    margin: 0 auto;
+
+    td {
+      &.ui-state-disabled {
+        span {
+          background: #e7e0da;
+        }
+      }
+
+      a, span {
+        background: $c-white;
+        margin: 2.5px;
+        color: $c-bodytext;
+        @include font-size(1.4, 1.4);
+        padding: 4px 2.5px 6px;
+        vertical-align: middle;
+        letter-spacing: 0;
+        @include transition(all 0.2s ease-in-out);
+
+        &.ui-state-highlight, &:hover {
+          background: $c-black;
+          color: $c-white;
+        }
+      }
+    }
+  }
 }

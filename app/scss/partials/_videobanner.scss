@@ -1,7 +1,7 @@
 @keyframes icon {
-    0% {top:0;}
-    10% {top:5px;}
-    20% {top:0;}
+    0% {margin-top:0;}
+    10% {margin-top:-5px;}
+    20% {margin-top:0;}
 }
 
 .m-videobanner {
@@ -32,6 +32,7 @@
     @include centre(both);
     width: 80%;
     width: calc(100% - 80px);
+    max-width: 700px;
 
     h1, h2 {
       color: $c-white;
@@ -57,8 +58,7 @@
       fill: $c-white;
       width: 30px;
       height: 30px;
-      display: table;
-      margin: 0 auto;
+      @include centre(x);
       animation-name: icon;
       animation-duration: 5s;
       animation-iteration-count: infinite;

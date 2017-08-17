@@ -6,7 +6,7 @@
   padding: 5px 30px;
   min-width: 150px;
   text-align: center;
-  @include transition(all 0.2s ease-in-out);
+  @include transition(all 0.4s ease-in-out);
 
   &.btn-gold {
     border: 2px solid $c-gold;
@@ -35,8 +35,6 @@
   .btn {
     position: relative;
     z-index: 1;
-    @include transition(all 0.3s ease-in-out);
-
 
     &:after {
       position: absolute;
@@ -45,7 +43,7 @@
       height: 100%;
       bottom:0;
       left:0;
-      @include transition(all 0.3s ease-in-out);
+      @include transition(all 0.4s ease-in-out);
     }
 
 

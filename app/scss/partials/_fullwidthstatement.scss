@@ -1,0 +1,41 @@
+.m-fullwidthstatement {
+  padding: 40px 0;
+  position: relative;
+  overflow: hidden;
+
+  .bars-bg {
+    position: absolute;
+    width: 195px;
+    height: 105px;
+    fill: #025977;
+    bottom: 0;
+    left: 0;
+  }
+
+  &.blue {
+    background: $c-darkblue;
+  }
+
+  h2 {
+    color: $c-white;
+    margin: 0;
+    position: relative;
+    text-align: center;
+  }
+
+  @media (min-width: $screen-sm) {
+    .bars-bg {
+      width: 215px;
+      height: 115px;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    padding: 60px 0;
+
+    .bars-bg {
+      width: 280px;
+      height: 150px;
+    }
+  }
+}

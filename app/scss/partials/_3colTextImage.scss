@@ -1,0 +1,52 @@
+.m-3colTextImage {
+  background: $c-lightgrey;
+  @include blockpadding;
+
+  .content-container {
+    position: relative;
+    overflow: hidden;
+
+    .bg-image {
+      @include image-cover();
+      display: none;
+    }
+
+    .text-inner {
+      background: $c-lightgrey;
+      position: relative;
+      z-index: 2;
+
+      .smalltext {
+        @include smalltext;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .content-container {
+      .bg-image {
+        display: block;
+      }
+
+      .text-inner {
+        width: 50%;
+        display: table;
+        margin: 0 auto;
+        padding: 0 30px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    .content-container {
+      .text-inner {
+        width: 33%;
+      }
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 100px 0;
+  }
+}

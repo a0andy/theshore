@@ -1,0 +1,41 @@
+.m-fullwidthImgVideo {
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+
+  img {
+    @include image-cover();
+  }
+
+  video {
+    position: absolute;
+  }
+
+  .bannertext {
+    @include centre(both);
+    width: 80%;
+    width: calc(100% - 80px);
+    max-width: 700px;
+
+    p {
+      @include smalltext;
+      margin-bottom: 0;
+    }
+
+    p, h2 {
+      color: $c-white;
+      text-align: center;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    video {
+      display: block;
+    }
+
+    img {
+      display: none;
+    }
+  }
+}

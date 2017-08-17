@@ -6,6 +6,14 @@
   }
 }
 
+@mixin blockpadding() {
+  padding: 50px 0;
+
+  @media (min-width: $screen-md) {
+    padding: 80px 0;
+  }
+}
+
 @mixin smalltext() {
   text-transform: uppercase;
   letter-spacing: 2px;

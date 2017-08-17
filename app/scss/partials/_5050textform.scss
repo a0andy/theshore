@@ -1,0 +1,68 @@
+.m-5050textform {
+  @include clearfix;
+  @include blockmargin;
+
+  .smalltext {
+    @include smalltext;
+    margin-bottom: 0;
+  }
+
+  .text {
+    @include grid(12, 12, 6, 6);
+
+    .text-inner {
+      margin-top: 60px;
+    }
+  }
+
+  .form {
+    padding: 30px;
+    margin-top: 20px;
+    @include grid(12, 12, 6, 6);
+    background: $c-lightgrey;
+
+    .smalltext {
+      color: $c-gold;
+      margin-bottom: 5px;
+    }
+
+    form {
+      font-size: 0;
+      margin: 0 -5px;
+
+      input, select, button {
+        margin: 5px;
+        display: inline-block;
+        width: 45%;
+        width: calc(50% - 10px);
+      }
+
+      button {
+        background: $c-gold;
+        color: $c-white;
+        border: 2px solid $c-gold;
+        padding: 11px 13px;
+
+        &:hover {
+          background: $c-white;
+          color: $c-gold;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .text {
+      .text-inner {
+        margin-right: 70px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    .form {
+      margin-top: 0;
+      padding: 60px;
+    }
+  }
+}
