@@ -1,9 +1,11 @@
 .m-slim5050 {
   @include blockmargin;
+  padding-bottom: 40px;
+  overflow: hidden;
 
   .container {
     position: relative;
-    min-height: 250px;
+    min-height: 400px;
   }
 
   .text {
@@ -35,6 +37,8 @@
     float: right;
     position: relative;
     z-index: 2;
+    font-size: 0;
+    line-height: 0;
 
     img {
       margin-bottom: 20px;
@@ -59,6 +63,7 @@
 
   @media (min-width: $screen-md) {
     position: relative;
+    padding: 20px 0;
 
     .text {
       @include centre(y);
@@ -75,6 +80,10 @@
     }
 
     .image {
+      @include centre(y);
+      float: right;
+      right: 0;
+
       img {
         margin-bottom: 0;
       }

@@ -3,21 +3,53 @@
   position: relative;
   overflow: hidden;
 
-  // &.twocol {
-  //   .item {
-  //     @include grid(12, 12, 6, 6);
-  //   }
-  // }
-  //
-  // &.fourcol {
-  //   .item {
-  //     @include grid(12, 12, 6, 3);
-  //   }
-  // }
-
   &.blue {
-    .background {
-      @include image-cover();
+    background-image: url('../images/s-bluebarsbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &.gold {
+    background-image: url('../images/s-goldweddingbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .item {
+      .item-inner {
+        .text {
+          a {
+            color: $c-darkblue;
+            border-color: $c-darkblue;
+          }
+        }
+      }
+    }
+  }
+
+  &.grey {
+    background-image: url('../images/s-greybarsbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .intro {
+      h2, p {
+        color: $c-darkblue;
+      }
+    }
+
+    .item {
+      .item-inner {
+        .text {
+          h2,p {
+            color: $c-darkblue;
+          }
+          
+          a {
+            color: $c-darkblue;
+            border-color: $c-darkblue;
+          }
+        }
+      }
     }
   }
 
@@ -37,7 +69,7 @@
   }
 
   .item {
-    @include grid(12, 12, 4, 4);
+    @include grid(12, 6, 4, 4);
     margin-bottom: 50px;
 
     .item-inner {
@@ -65,11 +97,9 @@
     }
   }
 
-  @media (min-width: $screen-md) {
-    padding: 80px 0;
+  @media (min-width: $screen-sm) {
+    .bars-bg {
 
-    .intro {
-      padding-bottom: 35px;
     }
 
     .item-container {
@@ -78,11 +108,23 @@
     }
 
     .item {
-      margin-bottom: 0;
       padding: 0 25px;
+    }
+  }
 
-      .item-inner {
-      }
+  @media (min-width: $screen-md) {
+    padding: 80px 0;
+
+    .bars-bg {
+
+    }
+
+    .intro {
+      padding-bottom: 35px;
+    }
+
+    .item {
+      margin-bottom: 0;
     }
   }
 }

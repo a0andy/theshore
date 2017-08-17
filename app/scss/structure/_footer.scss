@@ -78,6 +78,16 @@ footer {
             display: inline-block;
             margin-right: 10px;
 
+            &.facebook {
+              a {
+                svg {
+                  margin-top: 2px;
+                  width: 18px;
+                  height: 16px;
+                }
+              }
+            }
+
             a {
               margin: 0;
 

@@ -33,11 +33,10 @@ $screen-lg: 1200px;
 $screen-xl: 1450px;
 
 .container {
-  width: auto;
-  display: table;
-  margin: 0 auto;
-  padding-left: 40px;
   padding-right: 40px;
+  padding-left: 40px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @media (min-width: $screen-sm) {

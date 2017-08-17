@@ -1,0 +1,39 @@
+.m-fullwidthcta {
+  padding: 40px 0;
+  background: $c-lightgrey;
+
+  p {
+    font-family: $title-font;
+  }
+
+  @media (min-width: $screen-sm) {
+    h2, p, a {
+      margin: 0;
+    }
+
+    h2 {
+      margin-right: 50px;
+    }
+
+    a, p {
+      display: inline-block;
+    }
+
+    a {
+      margin-left: 40px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    h2 {
+      display: inline-block;
+      margin-left: 50px;
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    h2 {
+      margin-left: 100px;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.m-indented5050 {
+  @include blockmargin;
+  @include clearfix;
+
+  .content-container {
+    .image, .text {
+      @include grid(12, 6, 6, 6);
+    }
+
+    .image {
+      img {
+        margin-bottom: 20px;
+      }
+    }
+
+    .text {
+      .text-inner {
+        .smalltext {
+          @include smalltext;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .content-container {
+      .text {
+        .text-inner {
+          margin-left: 70px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    .content-container {
+      margin-left: 50px;
+
+      .text {
+        .text-inner {
+          margin-top: 40px;
+          margin-left: 70px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    .content-container {
+      margin-left: 100px;
+    }
+  }
+}
