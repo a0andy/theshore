@@ -1,0 +1,1 @@
+!function(e,n,o){function t(){var e=new ScrollMagic.Controller({globalSceneOptions:{triggerHook:"onEnter",duration:"200%"}});new ScrollMagic.Scene({triggerElement:".m-3colTextImage"}).setTween(".m-3colTextImage .bg-image",{y:"40%",ease:Linear.easeNone}).addTo(e)}e(function(){t()})}(window.jQuery,window,document);

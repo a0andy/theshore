@@ -8,16 +8,21 @@
     });
   }
 
-  function videoparallax() {
-    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+  function videofixed() {
+    $(window).on('scroll', function() {
+      var y_scroll_pos = window.pageYOffset;
+      var scroll_pos = $('.m-videobanner').outerHeight() + 100;
 
-    new ScrollMagic.Scene({triggerElement: ".m-videobanner"})
-			.setTween(".m-videobanner video", {y: "100%", ease: Linear.easeNone})
-			.addTo(controller);
+      if(y_scroll_pos > scroll_pos) {
+        $('.m-videobanner').addClass('nofix');
+      } else {
+        $('.m-videobanner').removeClass('nofix');
+      }
+    });
   }
 
  $(function() {
   ctascroll();
-  // videoparallax();
+  videofixed();
  });
 }(window.jQuery, window, document));
