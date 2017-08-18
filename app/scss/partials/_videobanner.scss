@@ -25,7 +25,7 @@
   }
 
   video {
-    position: absolute;
+    display: none;
   }
 
   .bannertext {
@@ -68,6 +68,8 @@
   @media (min-width: $screen-md) {
     video {
       display: block;
+      position: absolute;
+      top: -60%;
     }
 
     img {
