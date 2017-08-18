@@ -9,7 +9,7 @@
       $('nav').stop().fadeToggle();
     });
 
-    $('.reservationbtn').on('click', function(e) {
+    $('.reservationbtn, header .calendar').on('click', function(e) {
       $('nav').stop().fadeOut();
       $('header').stop().removeClass('open');
 
@@ -21,10 +21,18 @@
 
     $('nav p').on('click', function() {
       $('.sub').stop().slideUp();
+
+      if ($(this).hasClass('active')) {
+        $(this).removeClass('active').siblings('p').removeClass('active');
+      } else {
+        $(this).addClass('active').siblings('p').removeClass('active');
+      }
+
+
       $(this).next('.sub').stop().slideToggle();
     });
 
-    $('header, nav, .reservationform, .ui-datepicker').on('click', function(e) {
+    $('header, nav, .calendar, .reservationform, .ui-datepicker').on('click', function(e) {
       e.stopPropagation();
     });
 
@@ -94,10 +102,23 @@
     $('footer .footeritem.bottomrow').matchHeight();
   }
 
+  function password() {
+    $('#passbutton').on('click', function() {
+      if ($('#passfield').val().toLowerCase() == 'entertheshore') {
+        $('body').removeClass('hide');
+        $('#passform').hide();
+      } else {
+        alert('wrong password');
+      }
+    });
+  }
+
  $(function() {
    mainnav();
    headerform();
    footerheight();
    scrollactive();
+
+   password();
  });
 }(window.jQuery, window, document));

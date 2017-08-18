@@ -26,35 +26,26 @@
 
   </head>
   <body class='hide'>
-    <!-- <SCRIPT>
-function passWord() {
-var testV = 1;
-var pass1 = prompt('Please Enter Your Password',' ');
-while (testV < 300) {
-if (pass1.toLowerCase() == "entertheshore") {
-$('body').removeClass('hide');
-$('.passbtn').hide();
-break;
-} else {
-  prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-}
-testV+=1;
-var pass1 =
-prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-}
-if (pass1.toLowerCase()!="password" & testV ==3)
-return " ";
-}
-</SCRIPT>
-<div class='passbtn' style='display:table;margin:0 auto;'>
-<FORM>
-<input type="button" value="Enter Protected Area" onClick="passWord()">
-</FORM>
+    <!-- <form action="#" id='passform'>
+  <input id='passfield' type="password" placeholder='Password'>
+  <input id='passbutton' type="button" name="" value="Enter">
+</form>
 </div>
 
 <style>
 body.hide section, body.hide div, body.hide header, body.hide nav, body.hide footer, body.hide h2  {
   display: none;
+}
+#passform {
+  display: table;
+  margin: 50px auto;
+}
+#passform input {
+  text-align: center;
+}
+#passform #passbutton {
+  width: 100%;
+  margin-top: 10px;
 }
 </style> -->
 
@@ -342,9 +333,13 @@ body.hide section, body.hide div, body.hide header, body.hide nav, body.hide foo
     <nav>
 	<p class='title'>Menu</p>
 	<p>Home <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		 width="23px" height="16.5px" viewBox="0 0 23 16.5" enable-background="new 0 0 23 16.5" xml:space="preserve">
-	<rect y="6.617" width="21.438" height="2.91"/>
-	<polygon points="18.525,7.999 11.676,1.149 14.824,0 23,8.176 14.824,16.352 11.498,15.025 "/>
+		 width="183px" height="347.5px" viewBox="0 0 183 347.5" enable-background="new 0 0 183 347.5" xml:space="preserve">
+	<g>
+		<polygon points="181.907,173.479 30.041,1.899 1,10.823 152.865,182.402 	"/>
+	</g>
+	<g>
+		<polygon points="181.907,173.427 30.041,345.008 1,336.084 152.865,164.503 	"/>
+	</g>
 	</svg>
 </p>
 	<ul class='sub'>
@@ -354,9 +349,13 @@ body.hide section, body.hide div, body.hide header, body.hide nav, body.hide foo
 		<li><a href="">link 4</a></li>
 	</ul>
 	<p>About <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		 width="23px" height="16.5px" viewBox="0 0 23 16.5" enable-background="new 0 0 23 16.5" xml:space="preserve">
-	<rect y="6.617" width="21.438" height="2.91"/>
-	<polygon points="18.525,7.999 11.676,1.149 14.824,0 23,8.176 14.824,16.352 11.498,15.025 "/>
+		 width="183px" height="347.5px" viewBox="0 0 183 347.5" enable-background="new 0 0 183 347.5" xml:space="preserve">
+	<g>
+		<polygon points="181.907,173.479 30.041,1.899 1,10.823 152.865,182.402 	"/>
+	</g>
+	<g>
+		<polygon points="181.907,173.427 30.041,345.008 1,336.084 152.865,164.503 	"/>
+	</g>
 	</svg>
 </p>
 	<ul class='sub'>
@@ -366,9 +365,13 @@ body.hide section, body.hide div, body.hide header, body.hide nav, body.hide foo
 		<li><a href="">Reviews</a></li>
 	</ul>
 	<p>Title <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-		 width="23px" height="16.5px" viewBox="0 0 23 16.5" enable-background="new 0 0 23 16.5" xml:space="preserve">
-	<rect y="6.617" width="21.438" height="2.91"/>
-	<polygon points="18.525,7.999 11.676,1.149 14.824,0 23,8.176 14.824,16.352 11.498,15.025 "/>
+		 width="183px" height="347.5px" viewBox="0 0 183 347.5" enable-background="new 0 0 183 347.5" xml:space="preserve">
+	<g>
+		<polygon points="181.907,173.479 30.041,1.899 1,10.823 152.865,182.402 	"/>
+	</g>
+	<g>
+		<polygon points="181.907,173.427 30.041,345.008 1,336.084 152.865,164.503 	"/>
+	</g>
 	</svg>
 </p>
 	<ul class='sub'>
@@ -626,8 +629,8 @@ body.hide section, body.hide div, body.hide header, body.hide nav, body.hide foo
   </div>
 
   <picture>
-    <source srcset="http://lorempixel.com/768/1024/" media="(min-width: 768px)" />
-    <img srcset="http://lorempixel.com/375/667/" alt="Sample pic" />
+    <source srcset="images/slimbanner/slim-sm.jpg" media="(min-width: 768px)" />
+    <img srcset="images/slimbanner/slim-xs.jpg" alt="Sample pic" />
   </picture>
 
   <video autoplay muted loop>
@@ -716,9 +719,9 @@ body.hide section, body.hide div, body.hide header, body.hide nav, body.hide foo
           <div class="item-inner">
             <img src="images/temp/cutout-events.png" alt="">
             <div class="text">
-              <h2>Events</h2>
+              <h2>Conferences &amp; Events</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, optio, numquam. Incidunt dolorum ea nemo cum magni, delectus eius at ipsam magnam. Quia, architecto blanditiis eos asperiores earum a beatae.</p>
-              <p class='link'>Events at The Shore</p>
+              <p class='link'>Conferences &amp; Events</p>
             </div>
           </div>
         </a>
@@ -1111,16 +1114,10 @@ body.hide section, body.hide div, body.hide header, body.hide nav, body.hide foo
             <a href="">location</a>
           </li>
           <li>
-            <a href="">seasonal</a>
+            <a href="">reviews</a>
           </li>
           <li>
-            <a href="">bookings</a>
-          </li>
-          <li>
-            <a href="">bookings</a>
-          </li>
-          <li>
-            <a href="">bookings</a>
+            <a href="">visit scotland</a>
           </li>
         </ul>
       </div>
@@ -1208,7 +1205,7 @@ body.hide section, body.hide div, body.hide header, body.hide nav, body.hide foo
 </footer>
 <section class="footer-lower">
   <div class="lower-container">
-    <p>© Copyright Optical Express 2017</p> <span>|</span> <a href="">Terms &amp; Conditions</a> <span>|</span> <a href="">Privacy &amp; Cookies</a> <span>|</span> <a href="">Site Map</a>
+    <p>© Copyright 2017 The Shore Loch Lomond</p> <span>|</span> <a href="">Terms &amp; Conditions</a> <span>|</span> <a href="">Privacy &amp; Cookies</a> <span>|</span> <a href="">Site Map</a>
   </div>
 </section>
 

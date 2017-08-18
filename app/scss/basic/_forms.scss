@@ -8,16 +8,6 @@ label {
   }
 }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 1px;
-  text-overflow: '';
-  background-image: url('../images/inputarrow.png');
-  background-repeat: no-repeat;
-  background-position: 94% 52%;
-}
-
 input,
 textarea, select, option {
   display: block;
@@ -44,6 +34,17 @@ textarea, select, option {
   &.error{
     border: 2px solid $c-errorred;
   }
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  background-image: url('../images/inputarrow.png');
+  background-repeat: no-repeat;
+  background-position: 94% 52%;
+  padding-right: 40px;
 }
 
 textarea {

@@ -35,12 +35,20 @@ nav {
       }
     }
 
+    &.active {
+      svg {
+        @include rotate(90deg);
+      }
+    }
+
     svg {
-      width: 6px;
-      height: 10px;
+      width: 9px;
+      height: 9px;
       fill: $c-gold;
       position: absolute;
       @include centre(y);
+      @include transition(all 0.2s ease-in-out);
+      transform-origin: 75% 25%;
       margin-left: 5px;
     }
   }

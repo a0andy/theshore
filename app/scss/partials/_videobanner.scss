@@ -5,8 +5,8 @@
 }
 
 .m-videobanner {
-  height: 100vh;
-  // overflow: hidden;
+  height: 90vh;
+  overflow: hidden;
   position: relative;
 
   .logo {
@@ -25,7 +25,7 @@
   }
 
   video {
-    position: absolute;
+    display: none;
   }
 
   .bannertext {
@@ -66,6 +66,7 @@
   }
 
   @media (min-width: $screen-md) {
+    height: 100vh;
     &.nofix {
       video {
         position: relative;

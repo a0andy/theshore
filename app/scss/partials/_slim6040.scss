@@ -1,27 +1,11 @@
 .m-slim6040 {
   @include blockmargin;
-  padding-bottom: 40px;
-
-  .container {
-    position: relative;
-    min-height: 400px;
-  }
+  @include clearfix;
 
   .text {
     @include grid(12, 12, 6, 5);
-    position: relative;
-
-    &:before {
-      content:'';
-      background: $c-lightgrey;
-      height: 100%;
-      width: 500%;
-      position: absolute;
-      top: -80px;
-      left: -100%;
-      z-index: -1;
-      padding: 80px 0 40px;
-    }
+    background: $c-lightgrey;
+    padding: 25px;
 
     .text-inner {
       .smalltext {
@@ -71,16 +55,40 @@
   }
 
   @media (min-width: $screen-md) {
+    background: $c-lightgrey;
+
+    .image {
+      img {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
     position: relative;
     padding: 20px 0;
+    background: none;
+
+    .container {
+      position: relative;
+      @include clearfix;
+    }
+
+    &:before {
+      display: block;
+      background: $c-lightgrey;
+      content:'';
+      height: 60%;
+      width: 500%;
+      left: -100%;
+      z-index: -1;
+      @include centre(y);
+    }
 
     .text {
       @include centre(y);
-
-      &:before {
-        padding: 40px 0;
-        top: -40px;
-      }
+      padding: 0;
+      background: none;
 
       .text-inner {
         margin-right: 70px;
@@ -89,12 +97,8 @@
     }
 
     .image {
-      @include centre(y);
-      float: right;
-      right: 0;
-
       img {
-        margin-bottom: 0;
+        width: 100%;
       }
     }
   }

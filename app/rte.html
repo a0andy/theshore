@@ -26,35 +26,26 @@
   </head>
   <body class='hide'>
 
-    <!-- <SCRIPT>
-function passWord() {
-var testV = 1;
-var pass1 = prompt('Please Enter Your Password',' ');
-while (testV < 300) {
-if (pass1.toLowerCase() == "entertheshore") {
-$('body').removeClass('hide');
-$('.passbtn').hide();
-break;
-} else {
-  prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-}
-testV+=1;
-var pass1 =
-prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-}
-if (pass1.toLowerCase()!="password" & testV ==3)
-return " ";
-}
-</SCRIPT>
-<div class='passbtn' style='display:table;margin:0 auto;'>
-<FORM>
-<input type="button" value="Enter Protected Area" onClick="passWord()">
-</FORM>
+    <!-- <form action="#" id='passform'>
+  <input id='passfield' type="password" placeholder='Password'>
+  <input id='passbutton' type="button" name="" value="Enter">
+</form>
 </div>
 
 <style>
 body.hide section, body.hide div, body.hide header, body.hide nav, body.hide footer, body.hide h2  {
   display: none;
+}
+#passform {
+  display: table;
+  margin: 50px auto;
+}
+#passform input {
+  text-align: center;
+}
+#passform #passbutton {
+  width: 100%;
+  margin-top: 10px;
 }
 </style> -->
 
