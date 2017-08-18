@@ -8,7 +8,16 @@
     });
   }
 
+  function videoparallax() {
+    var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+
+    new ScrollMagic.Scene({triggerElement: ".m-videobanner"})
+			.setTween(".m-videobanner video", {y: "100%", ease: Linear.easeNone})
+			.addTo(controller);
+  }
+
  $(function() {
   ctascroll();
+  // videoparallax();
  });
 }(window.jQuery, window, document));

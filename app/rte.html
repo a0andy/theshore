@@ -17,6 +17,10 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
 
+<!--[if IE]>
+	<link rel="stylesheet" type="text/css" href="all-ie-only.css" />
+<![endif]-->
+
 <link href="css/styles.css" rel="stylesheet" type="text/css">
 
   </head>
@@ -28,7 +32,6 @@ var testV = 1;
 var pass1 = prompt('Please Enter Your Password',' ');
 while (testV < 300) {
 if (pass1.toLowerCase() == "entertheshore") {
-alert('You Got it Right!');
 $('body').removeClass('hide');
 $('.passbtn').hide();
 break;
@@ -108,6 +111,11 @@ body.hide section, body.hide div, body.hide header, body.hide nav, body.hide foo
 
 <script src="bower_components/picturefill/dist/picturefill.js"></script>
 <script src="bower_components/matchHeight/jquery.matchHeight-min.js"></script>
+<!-- <script src="bower_components/scrollmagic/scrollmagic/minified/ScrollMagic.min.js"></script> -->
+<script src='//rawgit.com/janpaepke/ScrollMagic/master/js/lib/greensock/TweenMax.min.js'></script>
+<script src='//rawgit.com/janpaepke/ScrollMagic/master/scrollmagic/uncompressed/ScrollMagic.js'></script>
+<script src='//rawgit.com/janpaepke/ScrollMagic/master/scrollmagic/uncompressed/plugins/animation.gsap.js'></script>
+
 <!-- <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script> -->
 <!-- <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script> -->
 

@@ -1,7 +1,6 @@
-.m-slim5050 {
+.m-slim6040 {
   @include blockmargin;
   padding-bottom: 40px;
-  overflow: hidden;
 
   .container {
     position: relative;
@@ -40,8 +39,18 @@
     font-size: 0;
     line-height: 0;
 
+    &.active {
+      img {
+        opacity: 1;
+        margin-top: 0;
+      }
+    }
+
     img {
       margin-bottom: 20px;
+      margin-top: 30px;
+      opacity: 0;
+      @include transition(all 0.8s ease-in-out);
     }
   }
 

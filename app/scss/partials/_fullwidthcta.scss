@@ -2,8 +2,84 @@
   padding: 40px 0;
   background: $c-lightgrey;
 
+  &.black {
+    background: $c-black;
+
+    p {
+      color: $c-gold;
+    }
+
+    .btn {
+      background: $c-black;
+      color: $c-gold;
+
+      &:after {
+        background: $c-gold;
+      }
+
+      &:hover {
+        color: $c-black;
+        background: $c-gold;
+      }
+    }
+  }
+
+  &.blue {
+    background: $c-darkblue;
+
+    h2, p {
+      color: $c-white;
+    }
+
+    .btn {
+      background: $c-darkblue;
+      border-color: $c-white;
+      color: $c-white;
+
+      &:after {
+        background: $c-white;
+      }
+
+      &:hover {
+        color: $c-darkblue;
+        background: $c-white;
+      }
+    }
+  }
+
+  &.gold {
+    background: $c-gold;
+
+    h2, p {
+      color: $c-white;
+    }
+
+    .btn {
+      background: $c-gold;
+      border-color: $c-white;
+      color: $c-white;
+
+      &:after {
+        background: $c-white;
+      }
+
+      &:hover {
+        color: $c-gold;
+        background: $c-white;
+      }
+    }
+  }
+
   p {
     font-family: $title-font;
+  }
+
+  .btn {
+    background: $c-lightgrey;
+
+    &:hover {
+      color: $c-lightgrey;
+    }
   }
 
   @media (min-width: $screen-sm) {

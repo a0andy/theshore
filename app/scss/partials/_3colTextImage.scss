@@ -7,7 +7,6 @@
     overflow: hidden;
 
     .bg-image {
-      @include image-cover();
       display: none;
     }
 
@@ -27,6 +26,15 @@
     .content-container {
       .bg-image {
         display: block;
+        overflow: hidden;
+        position: absolute;
+        bottom: 0;
+
+        img {
+          height: 200%;
+      		position: relative;
+      		top: -100%;
+        }
       }
 
       .text-inner {

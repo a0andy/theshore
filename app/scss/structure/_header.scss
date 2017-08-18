@@ -6,6 +6,13 @@ header {
   z-index: 10;
 
   .logo {
+    position: static;
+    border: none;
+
+    &:after {
+      display: none;
+    }
+    
     svg {
       @include centre(both);
       opacity: 0;

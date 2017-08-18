@@ -47,6 +47,10 @@
           .link {
             color: $c-darkblue;
             border-color: $c-darkblue;
+
+            &:after {
+              background: $c-gold;
+            }
           }
         }
       }
@@ -110,7 +114,7 @@
 
         .link {
           color: $c-gold;
-          border-bottom: 3px solid $c-gold;
+          border-bottom: 2px solid $c-gold;
 
           &:after {
             background: $c-white;

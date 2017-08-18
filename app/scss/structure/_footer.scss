@@ -58,11 +58,23 @@ footer {
             background: $c-gold;
             position: relative;
             width: 20%;
+            padding: 21px 0;
+            border: 2px solid $c-gold;
 
             svg {
-              width: 5px;
-              height: 5px;
+              width: 16px;
+              height: 11px;
               fill: $c-white;
+              @include centre(both);
+              @include transition(all 0.4s ease-in-out);
+            }
+
+            &:hover {
+              background: $c-white;
+
+              svg {
+                fill: $c-gold;
+              }
             }
           }
         }

@@ -1,5 +1,6 @@
 .m-5050grid {
   margin-top: 80px;
+  position: relative;
 
   .block5050 {
     padding: 0 0 80px;
@@ -53,7 +54,16 @@
       @include grid(12, 12, 6, 7);
       float: right;
       margin-bottom: 20px;
+      @include transition(all 0.8s ease-in-out);
       margin-top: -50px;
+      position: relative;
+      top: 30px;
+      opacity: 0;
+
+      &.active {
+        opacity: 1;
+        top: 0;
+      }
     }
   }
 

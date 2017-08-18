@@ -2,6 +2,64 @@
   @include clearfix;
   @include blockmargin;
 
+  &.black {
+    .form {
+      background: url('../images/form-gold.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &.blue {
+    .form {
+      background: $c-darkblue;
+
+      .smalltext {
+        color: $c-white;
+      }
+
+      input, select {
+        border-color: $c-white;
+      }
+
+      button {
+        background: $c-darkblue;
+        border-color: $c-white;
+        color: $c-white;
+
+        &:hover {
+          background: $c-white;
+          color: $c-darkblue;
+        }
+      }
+    }
+  }
+
+  &.gold {
+    .form {
+      background: $c-gold;
+
+      .smalltext {
+        color: $c-white;
+      }
+
+      input, select {
+        border-color: $c-white;
+      }
+
+      button {
+        background: $c-gold;
+        border-color: $c-white;
+        color: $c-white;
+
+        &:hover {
+          background: $c-white;
+          color: $c-gold;
+        }
+      }
+    }
+  }
+
   .smalltext {
     @include smalltext;
     margin-bottom: 0;
