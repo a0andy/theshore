@@ -92,7 +92,7 @@
         margin: 5px;
         display: inline-block;
         width: 45%;
-        width: calc(50% - 10px);
+        width: 100%;
       }
 
       button {
@@ -113,6 +113,14 @@
     .text {
       .text-inner {
         margin-right: 70px;
+      }
+    }
+
+    .form {
+      form {
+        input, select, button  {  
+          width: calc(50% - 10px);
+        }
       }
     }
   }

@@ -1,0 +1,1 @@
+!function(o,i,c){function e(){o(".accordion").on("click",function(){o(this).hasClass("active")?o(".accordion").removeClass("active").children(".more").stop().slideUp():(o(".accordion").removeClass("active").children(".more").stop().slideUp(),o(this).addClass("active").children(".more").stop().slideDown())})}o(function(){e()})}(window.jQuery,window,document);

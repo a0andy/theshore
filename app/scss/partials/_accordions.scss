@@ -1,0 +1,51 @@
+.m-accordions {
+  @include blockpadding;
+  background: $c-gold;
+
+  .accordion {
+    display: block;
+    background: $c-white;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+
+    &.active {
+      h3 {
+        svg {
+          @include transform(rotate(180deg));
+        }
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      cursor: pointer;
+      display: block;
+      margin-bottom: 0;
+      position: relative;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        @include centre(y);
+        right: 0px;
+        fill: $c-gold;
+        @include transition(all 0.2s ease-in-out);
+        transform-origin: 50% 25%;
+      }
+    }
+
+    .more {
+      display: none;
+      margin-top: 10px;
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    .container {
+      width: 1120px;
+    }
+  }
+}

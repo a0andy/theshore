@@ -10,6 +10,14 @@
   display: none;
   padding: 25px 40px;
 
+  .link {
+    border: none!important;
+
+    &:after {
+      display: none;
+    }
+  }
+
   .spa {
     display: none;
 
