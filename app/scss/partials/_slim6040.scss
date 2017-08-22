@@ -1,15 +1,31 @@
 .m-slim6040 {
   @include blockmargin;
   @include clearfix;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    display: block;
+    background: $c-lightgrey;
+    content:'';
+    height: 60%;
+    width: 500%;
+    left: -100%;
+    bottom: 0px;
+    z-index: -1;
+  }
 
   &.overlap-top {
     margin-top: -25px;
   }
 
+  &.overlap-bottom {
+    margin-bottom: 0;
+  }
+
   .text {
     @include grid(12, 12, 6, 5);
-    background: $c-lightgrey;
-    padding: 25px;
+    padding: 25px 25px 50px;
 
     .text-inner {
       .smalltext {
@@ -30,13 +46,14 @@
     &.active {
       img {
         opacity: 1;
-        margin-top: 0;
+        top: 0;
       }
     }
 
     img {
       margin-bottom: 20px;
-      margin-top: 30px;
+      position: relative;
+      top: 30px;
       opacity: 0;
       @include transition(all 0.8s ease-in-out);
     }
@@ -60,6 +77,11 @@
 
   @media (min-width: $screen-md) {
     background: $c-lightgrey;
+    padding: 25px 0 20px;
+
+    &:before {
+      display: none;
+    }
 
     &.overlap-top {
       margin-top: 0;
@@ -69,30 +91,26 @@
       }
     }
 
-    &.overlap-bottom {
-      margin-bottom: 0;
-    }
-
     .image {
       img {
         margin-bottom: 0;
       }
     }
+
+    .text {
+      padding: 25px;
+    }
   }
 
   @media (min-width: $screen-lg) {
-    position: relative;
     background: none;
+    padding: 0;
 
     &:before {
-      display: block;
-      background: $c-lightgrey;
-      content:'';
-      height: 75%;
-      width: 500%;
-      left: -100%;
-      z-index: -1;
+      bottom: auto;
       @include centre(y);
+      display: block;
+      height: 75%;
     }
 
     &.overlap-top {
@@ -140,7 +158,7 @@
 
   @media (min-width: $screen-xl) {
     &:before {
-      height: 60%;
+      height: 65%;
     }
   }
 }

@@ -15,6 +15,7 @@
     background: $c-white;
     padding: 10px 20px;
     margin-bottom: 15px;
+    cursor: pointer;
 
     &.active {
       h3 {
@@ -29,7 +30,6 @@
     }
 
     h3 {
-      cursor: pointer;
       display: block;
       margin-bottom: 0;
       position: relative;
