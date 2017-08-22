@@ -1,11 +1,13 @@
 (function($, window, document) {
 
   function ctascroll() {
-    $(".m-videobanner .bannercta").click(function() {
-      $('html, body').animate({
-          scrollTop: $(".m-videobanner").outerHeight() - 40,
-      }, 1500);
-    });
+    if ($(window).width() > 991) {
+     $(".m-videobanner .bannercta").click(function() {
+       $('html, body').animate({
+         scrollTop: $(window).height(),
+       }, 1500);
+     });
+    }
   }
 
   function videofixed() {

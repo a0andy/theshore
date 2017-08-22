@@ -50,6 +50,7 @@ footer {
             display: inline-block;
             vertical-align: top;
             width: 80%;
+            border-radius: 0;
           }
 
           button {
@@ -59,6 +60,7 @@ footer {
             position: relative;
             width: 20%;
             padding: 22px 0;
+            height: 48px;
             border: 2px solid $c-gold;
 
             svg {

@@ -1,12 +1,14 @@
 (function($, window, document) {
 
   function formdatepicker() {
-    $( "#5050datepicker" ).datepicker({
-      changeMonth: true,
-      changeYear: true,
-      minDate: 0,
-      maxDate: "+6M +10D",
-      dateFormat: 'dd-mm-yy'
+    $('.5050datepicker').each(function() {
+      $(this).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        minDate: 0,
+        maxDate: "+6M +10D",
+        dateFormat: 'dd-mm-yy'
+      });
     });
   }
 

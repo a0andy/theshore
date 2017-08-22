@@ -1,10 +1,16 @@
 .m-3colgrid {
   @include blockpadding;
   @include clearfix;
+  background: $c-darkblue;
 
   h2 {
     text-align: center;
     margin-bottom: 60px;
+    color: $c-white;
+  }
+
+  h4, p, a {
+    color: $c-white;
   }
 
   .item-container {

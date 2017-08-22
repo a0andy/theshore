@@ -2,7 +2,7 @@
   width: 100%;
   max-width: 200px;
   max-width: calc(100% - 124px);
-  position: fixed;
+  position: absolute;
   top: 44px;
   left:0;
   background: rgba(177, 138, 46, 0.9);
@@ -31,6 +31,7 @@
     select, input {
       width: 100%;
       margin-bottom: 20px;
+      background-color: $c-white;
     }
 
     input {
@@ -55,6 +56,10 @@
 
   @media (min-width: 450px) {
     max-width: 300px;
+  }
+
+  @media (min-width: $screen-sm) {
+    position: fixed;
   }
 
   @media (min-width: $screen-md) {

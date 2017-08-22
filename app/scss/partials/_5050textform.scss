@@ -88,6 +88,12 @@
       font-size: 0;
       margin: 0 -5px;
 
+      input.hasDatepicker {
+        background-image: url('../images/calendar.png');
+        background-repeat: no-repeat;
+        background-position: 94% 50%;
+      }
+
       input, select, button {
         margin: 5px;
         display: inline-block;
@@ -118,7 +124,7 @@
 
     .form {
       form {
-        input, select, button  {  
+        input, select, button  {
           width: calc(50% - 10px);
         }
       }

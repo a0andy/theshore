@@ -1,5 +1,5 @@
 header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   @include clearfix();
   @include transition(all 0.4s ease-in-out);
@@ -29,6 +29,14 @@ header {
     .logo {
       svg {
         opacity: 1;
+      }
+    }
+
+    .headerlinks {
+      a {
+        svg {
+          fill: $c-black;
+        }
       }
     }
   }
@@ -178,6 +186,7 @@ header {
       svg {
         width: 20px;
         height: 20px;
+        fill: $c-white;
       }
     }
   }
@@ -199,6 +208,8 @@ header {
   }
 
   @media (min-width: $screen-sm) {
+    position: fixed;
+    
     .headerbuttons {
       .calendar {
         height: 44px;
@@ -217,16 +228,6 @@ header {
       svg {
         height: 40px;
         width: 80px;
-      }
-    }
-
-    &.scroll {
-      .headerlinks {
-        a {
-          svg {
-            fill: $c-black;
-          }
-        }
       }
     }
 
@@ -305,7 +306,6 @@ header {
           width: 25px;
           height: 25px;
           @include transition(all 0.3s ease-in-out);
-          fill: $c-white;
         }
 
         &:hover {

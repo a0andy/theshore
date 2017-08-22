@@ -63,15 +63,14 @@
 
     &.overlap-top {
       margin-top: 0;
-      background: $c-white;
-
-      .text {
-        background: $c-white;
-      }
 
       .image {
         margin-top: -40px;
       }
+    }
+
+    &.overlap-bottom {
+      margin-bottom: 0;
     }
 
     .image {
@@ -85,6 +84,17 @@
     position: relative;
     background: none;
 
+    &:before {
+      display: block;
+      background: $c-lightgrey;
+      content:'';
+      height: 75%;
+      width: 500%;
+      left: -100%;
+      z-index: -1;
+      @include centre(y);
+    }
+
     &.overlap-top {
       .image {
         margin-top: -40px;
@@ -93,26 +103,21 @@
 
     &.overlap-bottom {
       margin-bottom: 0;
-      
+      background: $c-lightgrey;
+
       .image {
         margin-bottom: -40px;
+        margin-top: -40px;
+      }
+
+      & + .m-fullwidthcta {
+        padding-top: 60px;
       }
     }
 
     .container {
       position: relative;
       @include clearfix;
-    }
-
-    &:before {
-      display: block;
-      background: $c-lightgrey;
-      content:'';
-      height: 60%;
-      width: 500%;
-      left: -100%;
-      z-index: -1;
-      @include centre(y);
     }
 
     .text {
@@ -130,6 +135,12 @@
       img {
         width: 100%;
       }
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    &:before {
+      height: 60%;
     }
   }
 }
