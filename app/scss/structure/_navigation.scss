@@ -87,6 +87,11 @@ nav {
         @include font-size(1.2, 1.2);
         letter-spacing: 2px;
         width: 100%;
+        @include transition(all 0.2s ease-in-out);
+
+        &:hover {
+          color: $c-gold;
+        }
 
         &:after {
           display: none;

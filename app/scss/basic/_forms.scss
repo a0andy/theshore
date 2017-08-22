@@ -84,6 +84,12 @@ button {
   @include transition(all 0.4s ease-in-out);
 }
 
+input.hasDatepicker {
+  background-image: url('../images/calendar.png');
+  background-repeat: no-repeat;
+  background-position: 94% 50%;
+}
+
 .ui-datepicker {
   border: 2px solid $c-gold;
   background: $c-lightgrey;

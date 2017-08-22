@@ -55,14 +55,6 @@
   }
 
   function headerform() {
-    $( "#datepicker" ).datepicker({
-      changeMonth: true,
-      changeYear: true,
-      minDate: 0,
-      maxDate: "+6M +10D",
-      dateFormat: 'dd-mm-yy'
-    });
-
     $('.reservationform .restype').on('change', function() {
       var resType = $(".reservationform .restype option:checked").val();
 
@@ -113,12 +105,24 @@
     });
   }
 
+  function calendar() {
+    $('.datepicker').each(function() {
+      $(this).datepicker({
+        changeMonth: true,
+        changeYear: true,
+        minDate: 0,
+        maxDate: "+6M +10D",
+        dateFormat: 'dd-mm-yy'
+      });
+    });
+  }
+
  $(function() {
    mainnav();
    headerform();
    footerheight();
    scrollactive();
-
+   calendar();
    password();
  });
 }(window.jQuery, window, document));
