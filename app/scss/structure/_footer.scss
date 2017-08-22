@@ -135,6 +135,7 @@ footer {
       &.contact {
         ul {
           li {
+
             a {
               @include font-size(1.2, 2.2);
 
@@ -174,6 +175,7 @@ footer {
             margin-bottom: 5px;
             @include font-size(1.4, 2.4);
             word-break: break-all;
+            letter-spacing: 1px;
 
             &:after {
               background: $c-white;
@@ -249,12 +251,14 @@ footer {
 
     p, a {
       color: $c-white;
-      @include font-size(1.4, 2.4);
-      font-family: $title-font;
+      @include font-size(1.2, 2.2);
+      font-family: "playfair_displayregular",Helvetica Neue,Helvetica Neue,Helvetica,Arial,sans-serif;
       display: block;
       font-weight: 400;
       text-align: center;
       margin-bottom: 5px;
+      text-transform: none;
+      letter-spacing: 1px;
     }
 
     span {

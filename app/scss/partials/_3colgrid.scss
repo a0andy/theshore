@@ -1,0 +1,19 @@
+.m-3colgrid {
+  @include blockpadding;
+  @include clearfix;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .item-container {
+    margin: 0 -25px;
+
+    .item {
+      @include grid(12, 6, 4, 4);
+      padding: 0 25px;
+      margin-bottom: 50px;
+    }
+  }
+}

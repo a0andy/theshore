@@ -4,6 +4,10 @@
   @media (min-width: $screen-md) {
     margin: 80px 0;
   }
+
+  @media (min-width: $screen-xl) {
+    margin: 100px 0;
+  }
 }
 
 @mixin blockpadding() {
@@ -11,6 +15,10 @@
 
   @media (min-width: $screen-md) {
     padding: 80px 0;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 100px 0;
   }
 }
 

@@ -38,4 +38,10 @@
       display: none;
     }
   }
+
+  @media (min-width: 1940px) {
+    video {
+      @include image-cover();
+    }
+  }
 }

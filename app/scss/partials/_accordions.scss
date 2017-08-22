@@ -1,6 +1,14 @@
 .m-accordions {
   @include blockpadding;
-  background: $c-gold;
+  background: $c-grey;
+
+  &.gold {
+    background: $c-gold;
+  }
+
+  &.blue {
+    background: $c-darkblue;
+  }
 
   .accordion {
     display: block;

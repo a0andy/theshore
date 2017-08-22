@@ -1,0 +1,104 @@
+.m-vouchercta {
+  background: $c-gold;
+  padding: 40px 0;
+
+  p, h2, a {
+    color: $c-white;
+  }
+
+  .smalltext {
+    @include smalltext;
+    margin-bottom: 0;
+  }
+
+  form {
+    label {
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 800;
+      display: block;
+      padding: 5px 30px;
+      text-align: center;
+      @include transition(all 0.4s ease-in-out);
+      border: 2px solid $c-white;
+      background: $c-gold;
+      color: $c-white;
+      cursor: pointer;
+      margin-bottom: 10px;
+
+      &:hover {
+        color: $c-gold;
+        background: $c-white;
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      background: $c-white;
+      padding: 10px 30px;
+      border: 2px solid $c-white;
+      color: $c-gold;
+
+      &:hover {
+        background: transparent;
+        color: $c-white;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    form {
+      label {
+        display: inline-block;
+        margin-right: 10px;
+        min-width: 80px;
+        padding: 5px;
+      }
+
+      button {
+        width: 120px;
+        padding: 10px 10px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    form {
+      label {
+        position: relative;
+        z-index: 1;
+
+        &:after {
+          content:'';
+          position: absolute;
+          z-index: -1;
+          width: 0;
+          height: 100%;
+          bottom:0;
+          left:0;
+          @include transition(all 0.4s ease-in-out);
+        }
+
+        &:after {
+          background: $c-white;
+        }
+
+        &:hover {
+          background: none!important;
+          background: transparent;
+          color: $c-gold;
+
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
