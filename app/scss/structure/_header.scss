@@ -12,7 +12,7 @@ header {
     &:after {
       display: none;
     }
-    
+
     svg {
       @include centre(both);
       opacity: 0;
@@ -29,15 +29,6 @@ header {
     .logo {
       svg {
         opacity: 1;
-      }
-    }
-
-    .headerlinks {
-      a {
-        &:first-child {
-          visibility: visible;
-          opacity: 1;
-        }
       }
     }
   }
@@ -184,14 +175,6 @@ header {
       border: none;
       margin-left: 10px;
 
-      &:first-child {
-        color: $c-black;
-        display: none;
-        @include font-size(1.2, 1.2);
-        position: relative;
-        top: -4px;
-      }
-
       svg {
         width: 20px;
         height: 20px;
@@ -223,18 +206,6 @@ header {
 
       .menu {
         padding: 9px 16px;
-      }
-    }
-
-    .headerlinks {
-      a {
-        &:first-child {
-          display: inline-block;
-          @include transition(all 0.4s ease-in-out);
-          opacity: 0;
-          position: relative;
-          visibility: hidden;
-        }
       }
     }
   }
@@ -325,14 +296,6 @@ header {
 
       a {
         margin-left: 25px;
-
-        &:first-child {
-          top: -8px;
-
-          &:hover {
-            color: $c-gold;
-          }
-        }
 
         &:after {
           display: none;
