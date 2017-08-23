@@ -6,6 +6,10 @@
     color: $c-white;
   }
 
+  p {
+    max-width: 1000px;
+  }
+
   .smalltext {
     @include smalltext;
     margin-bottom: 0;

@@ -1,25 +1,138 @@
 .m-3colgrid {
-  @include blockpadding;
   @include clearfix;
-  background: $c-darkblue;
+  background-color: $c-darkblue;
+  position: relative;
+  overflow: hidden;
 
-  h2 {
-    text-align: center;
-    margin-bottom: 60px;
-    color: $c-white;
+  .bars-bg {
+    position: absolute;
+    height: 60%;
+    width: auto;
+    fill: #0e546d;
+    bottom: 0;
+    right: 0;
   }
 
-  h4, p, a {
-    color: $c-white;
+  .top {
+    background: #a27d2d;
+    padding: 25px 0;
+    position: relative;
+    overflow: hidden;
+
+    p {
+      @include smalltext;
+    }
+
+    h2, P {
+      color: $c-white;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      margin-bottom: 0;
+    }
+
+    .largetext {
+      @include centre(x);
+      color: #aa863a;
+      text-align: center;
+      @include font-size(7.0, 7.0);
+      margin: 0;
+      bottom: -20px;
+      white-space: nowrap;
+    }
   }
 
   .item-container {
-    margin: 0 -25px;
+    margin: 0 -60px;
+    padding: 40px 0;
+    @include clearfix;
 
     .item {
       @include grid(12, 6, 4, 4);
-      padding: 0 25px;
-      margin-bottom: 50px;
+      padding: 0 60px 45px;
+      margin-bottom: 60px;
+      position: relative;
+
+      img {
+        margin-bottom: 5px;
+      }
+
+      h3, p {
+        color: $c-white;
+      }
+
+      h3 {
+        margin-bottom: 0;
+      }
+
+      .details {
+        color: #e6b626;
+        font-weight: 600;
+        @include font-size(1.4, 2.4);
+        margin-bottom: 10px;
+      }
+
+      .btn {
+        background: transparent;
+        margin-top: 5px;
+        position: absolute;
+        bottom: 0;
+        left: 60px;
+
+        &:hover {
+          background: $c-gold;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 500px) {
+    .top {
+      .largetext {
+        @include font-size(9.0, 9.0);
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .top {
+      padding: 40px;
+
+      .largetext {
+        @include font-size(14.0, 14.0);
+        bottom: -40px;
+      }
+    }
+
+    .item-container {
+      padding: 60px 0;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    .top {
+      .largetext {
+        @include font-size(17.0, 17.0);
+        bottom: -55px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    .top {
+      .largetext {
+        @include font-size(21.0, 21.0);
+        bottom: -70px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    .top {
+      .largetext {
+        @include font-size(26.0, 26.0);
+        bottom: -110px;
+      }
     }
   }
 }

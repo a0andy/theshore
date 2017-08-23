@@ -19,17 +19,18 @@
       }
 
       input, select {
-        border-color: $c-white;
+        border-color: $c-gold;
       }
 
       button {
-        background: $c-darkblue;
+        background: $c-gold;
         border-color: $c-white;
         color: $c-white;
 
         &:hover {
           background: $c-white;
-          color: $c-darkblue;
+          color: $c-gold;
+          border-color: $c-gold;
         }
       }
     }
@@ -44,17 +45,18 @@
       }
 
       input, select {
-        border-color: $c-white;
+        border-color: #9b6c00;
       }
 
       button {
-        background: $c-gold;
+        background: #9b6c00;
         border-color: $c-white;
         color: $c-white;
 
         &:hover {
           background: $c-white;
-          color: $c-gold;
+          color: #9b6c00;
+          border-color: #9b6c00;
         }
       }
     }
