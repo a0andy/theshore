@@ -90,6 +90,10 @@
       font-size: 0;
       margin: 0 -5px;
 
+      input, select {
+        background: $c-white;
+      }
+
       input, select, button {
         margin: 5px;
         display: inline-block;
