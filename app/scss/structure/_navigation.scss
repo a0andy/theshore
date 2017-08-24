@@ -22,9 +22,11 @@ nav {
     border-bottom: 1px solid #d9d6d6;
     background: $c-white;
     position: relative;
+    @include transition(all 0.2s ease-in-out);
 
     &:hover {
       cursor: pointer;
+      background: $c-white;
     }
 
     &.title {
@@ -91,6 +93,7 @@ nav {
 
         &:hover {
           color: $c-gold;
+          background: $c-white;
         }
 
         &:after {

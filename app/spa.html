@@ -399,6 +399,7 @@ body.hide section, body.hide div, body.hide header, body.hide nav, body.hide foo
   <form action="">
     <label for="type">Reservation Type*</label>
     <select class="restype" name="type" required>
+      <option value="dining" selected disabled>PLEASE SELECT</option>
       <option value="dining">Dining</option>
       <option value="conferences">Conferences &amp; Events</option>
       <option value="wedding">Weddings</option>
@@ -417,19 +418,19 @@ body.hide section, body.hide div, body.hide header, body.hide nav, body.hide foo
 
     <div class="extra-form">
       <label for="datepicker">Date*</label>
-      <input type="text" class="datepicker" required placeholder="Proposed Date">
+      <input type="text" class="datepicker" required placeholder="PROPOSED DATE">
 
       <label for="firstname">First name*</label>
-      <input type="text" name='firstname' required placeholder="First name">
+      <input type="text" name='firstname' required placeholder="FIRST NAME">
 
       <label for="lastname">Last name*</label>
-      <input type="text" name='lastname' required placeholder="last name">
+      <input type="text" name='lastname' required placeholder="LAST NAME">
 
       <label for="email">Email*</label>
-      <input type="email" name='email' required placeholder="email">
+      <input type="email" name='email' required placeholder="EMAIL">
 
       <label for="phone">Phone*</label>
-      <input type="tel" name='phone' required placeholder="phone">
+      <input type="tel" name='phone' required placeholder="PHONE">
 
       <button type="submit">Continue</button>
     </div>
@@ -830,18 +831,18 @@ body.hide section, body.hide div, body.hide header, body.hide nav, body.hide foo
     <div class="form">
       <p class='smalltext'>form</p>
       <form action="">
-        <input type="text" placeholder='first name'>
-        <input type="text" placeholder='last name'>
-        <input type="email" placeholder='email'>
-        <input type="tel" placeholder='phone'>
-        <input type="text" class="datepicker" placeholder='Proposed date'>
+        <input type="text" placeholder='FIRST NAME'>
+        <input type="text" placeholder='LAST NAME'>
+        <input type="email" placeholder='EMAIL'>
+        <input type="tel" placeholder='PHONE'>
+        <input type="text" class="datepicker" placeholder='PROPOSED DATE'>
         <select name="eventtype" id="">
-          <option value="" selected disabled>event type</option>
+          <option value="" selected disabled>EVENT TYPE</option>
           <option value="">option 2</option>
           <option value="">option 3</option>
           <option value="">option 4</option>
         </select>
-        <input type="number" name="" value="" placeholder='number in party'>
+        <input type="number" name="" value="" placeholder='NUMBER IN PARTY'>
         <button class='btn-gold' type='submit'>submit</button>
       </form>
     </div>

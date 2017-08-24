@@ -69,10 +69,6 @@
 
   .text {
     @include grid(12, 12, 6, 6);
-
-    .text-inner {
-      margin-top: 60px;
-    }
   }
 
   .form {
@@ -91,14 +87,15 @@
       margin: 0 -5px;
 
       input, select {
-        background: $c-white;
+        background-color: $c-white;
+        color: $c-bodytext;
       }
 
       input, select, button {
         margin: 5px;
         display: inline-block;
-        width: 45%;
-        width: 100%;
+        width: 95%;
+        width: calc(100% - 10px);
       }
 
       button {
@@ -125,6 +122,7 @@
     .form {
       form {
         input, select, button  {
+          width: 45%;
           width: calc(50% - 10px);
         }
       }
@@ -135,6 +133,12 @@
     .form {
       margin-top: 0;
       padding: 60px;
+    }
+
+    .text {
+      .text-inner {
+        margin-top: 60px;
+      }
     }
   }
 }

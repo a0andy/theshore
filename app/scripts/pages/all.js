@@ -40,6 +40,7 @@
       $('header, .reservationbtn').stop().removeClass('open');
       $('.sub').stop().slideUp();
       $('nav, .reservationform').stop().fadeOut();
+      $('nav p').removeClass('active');
     });
 
     $(window).on('scroll', function() {

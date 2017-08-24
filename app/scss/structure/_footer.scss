@@ -140,6 +140,7 @@ footer {
 
             a {
               @include font-size(1.2, 2.2);
+              word-break: break-all;
 
               span {
                 font-weight: 800;
@@ -176,7 +177,6 @@ footer {
             border-bottom: transparent;
             margin-bottom: 5px;
             @include font-size(1.4, 2.4);
-            word-break: break-all;
             letter-spacing: 1px;
 
             &:after {

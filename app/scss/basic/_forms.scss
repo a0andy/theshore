@@ -22,7 +22,6 @@ textarea, select, option {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  text-transform: uppercase;
   letter-spacing: 2px;
   @include font-size(1.2, 2.2);
   font-weight: 600;
@@ -47,6 +46,10 @@ input[type=number] {
     -moz-appearance:textfield;
 }
 
+input::-ms-clear {
+  display: none;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -56,6 +59,10 @@ select {
   background-repeat: no-repeat;
   background-position: 94% 52%;
   padding-right: 40px;
+}
+
+select::-ms-expand {
+    display: none;
 }
 
 textarea {
