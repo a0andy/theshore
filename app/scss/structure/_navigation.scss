@@ -10,7 +10,7 @@ nav {
   z-index: 10;
   display: none;
 
-  p {
+  p, .title {
     color: $c-gold;
     margin: 0;
     display: block;
@@ -29,12 +29,8 @@ nav {
       background: $c-white;
     }
 
-    &.title {
-      color: $c-black;
-
-      &:hover {
-        cursor: normal;
-      }
+    &:after {
+      display: none;
     }
 
     &.active {
@@ -115,7 +111,7 @@ nav {
     top: 50px;
     max-width: 361px;
 
-    p, ul {
+    p, ul, .title {
       background: none;
     }
   }

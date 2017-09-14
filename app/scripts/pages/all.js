@@ -27,7 +27,7 @@
       } else {
         $(this).addClass('active').siblings('p').removeClass('active');
       }
-      
+
       $(this).next('.sub').stop().slideToggle();
     });
 
