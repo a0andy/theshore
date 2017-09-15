@@ -1,0 +1,48 @@
+.breadcrumb {
+  position: relative;
+  top: -62px;
+  display: inline-block;
+  margin-left: 25px;
+
+  ul {
+    li {
+      display: inline-block;
+      margin-right: 5px;
+
+      &:before {
+        display: none;
+      }
+
+      svg {
+        width: 20px;
+        height: 13px;
+        fill: $c-white;
+        position: relative;
+        top: 2px;
+      }
+
+      a {
+        display: inline-block;
+        color: $c-white;
+        border-bottom: 1px solid $c-white;
+        font-weight: 400;
+        @include font-size(1.2, 2.2);
+
+        &:after {
+          background: $c-gold;
+          height: 1px;
+          bottom: -1px;
+        }
+      }
+
+      p {
+        display: inline-block;
+        color: $c-white;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: 400;
+        @include font-size(1.2, 2.2);
+      }
+    }
+  }
+}

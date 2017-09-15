@@ -42,6 +42,10 @@
       $('nav p').removeClass('active');
     });
 
+    $('header .phone').on('click', function() {
+      $(this).toggleClass('active');
+    });
+
     $(window).on('scroll', function() {
       var y_scroll_pos = window.pageYOffset;
       var scroll_pos = 5;

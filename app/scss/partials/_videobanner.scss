@@ -57,7 +57,7 @@
 
   .bannercta {
     @include centre(x);
-    bottom: 50px;
+    bottom: 100px;
     cursor: pointer;
 
     p {
@@ -76,6 +76,12 @@
       animation-name: icon;
       animation-duration: 5s;
       animation-iteration-count: infinite;
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .bannercta {
+      bottom: 50px;
     }
   }
 

@@ -183,6 +183,10 @@ header {
       border: none;
       margin-left: 10px;
 
+      p {
+        display: none;
+      }
+
       svg {
         width: 20px;
         height: 20px;
@@ -209,7 +213,7 @@ header {
 
   @media (min-width: $screen-sm) {
     position: fixed;
-    
+
     .headerbuttons {
       .calendar {
         height: 44px;
@@ -237,6 +241,16 @@ header {
       .headerbuttons {
         .menu {
           background: rgba(255, 255, 255, 0.9);
+        }
+      }
+    }
+
+    &.scroll {
+      .headerlinks {
+        a {
+          p {
+            color: $c-black;
+          }
         }
       }
     }
@@ -300,6 +314,23 @@ header {
 
         &:after {
           display: none;
+        }
+
+        &.active {
+          p {
+            opacity: 1;
+          }
+        }
+
+        p {
+          display: inline-block;
+          color: white;
+          margin-right: 15px;
+          font-weight: 400;
+          position: relative;
+          top: -7px;
+          opacity: 0;
+          @include transition(all 0.4s ease-in-out);
         }
 
         svg {
