@@ -26,6 +26,7 @@ textarea, select, option {
   @include font-size(1.2, 2.2);
   font-weight: 600;
   color: $c-bodytext;
+  text-transform: uppercase;
 
   &:focus {
     outline: 0;

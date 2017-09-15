@@ -7,21 +7,30 @@ a, .link {
   font-weight: 800;
   display: inline-block;
   position: relative;
-
-  &:after {
-    content: '';
-    width: 0;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    position: absolute;
-    background: $c-gold;
-    @include transition(all 0.4s ease-in-out);
-  }
+  @include transition(all 0.4s ease-in-out);
 
   &:hover {
+    border-bottom: 2px solid $c-gold;
+  }
+
+  @media (min-width: $screen-md) {
     &:after {
-      width: 100%;
+      content: '';
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      position: absolute;
+      background: $c-gold;
+      @include transition(all 0.4s ease-in-out);
+    }
+
+    &:hover {
+      border-bottom: 2px solid $c-darkblue;
+
+      &:after {
+        width: 100%;
+      }
     }
   }
 }
