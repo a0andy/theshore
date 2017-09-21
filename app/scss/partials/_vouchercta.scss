@@ -30,7 +30,7 @@
       cursor: pointer;
       margin-bottom: 10px;
 
-      &:hover {
+      &:hover, &.active {
         color: $c-gold;
         background: $c-white;
       }
@@ -93,7 +93,7 @@
           background: $c-white;
         }
 
-        &:hover {
+        &:hover, &.active {
           background: none!important;
           background: transparent;
           color: $c-gold;

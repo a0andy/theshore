@@ -1,0 +1,1 @@
+!function(c,o,n){function e(){c(".m-vouchercta form label").on("click",function(){c(".m-vouchercta form label").removeClass("active"),c(this).addClass("active")})}c(function(){e()})}(window.jQuery,window,document);
