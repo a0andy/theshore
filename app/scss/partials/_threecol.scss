@@ -23,6 +23,18 @@
           }
         }
       }
+      
+      a {
+        &:hover {
+          .item-inner {
+            .text {
+              h2 {
+                color: $c-darkblue;
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -85,6 +97,14 @@
       }
 
       &:hover {
+        .item-inner {
+          .text {
+            h2 {
+              color: $c-gold;
+            }
+          }
+        }
+
         .link {
           &:after {
             width: 100%;
@@ -109,6 +129,7 @@
         h2 {
           text-transform: none;
           letter-spacing: 0px;
+          @include transition(all 0.4s ease-in-out);
         }
 
         p:not(.link) {

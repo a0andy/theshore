@@ -1,8 +1,9 @@
 .breadcrumb {
-  position: relative;
-  top: -62px;
+  position: absolute;
   display: inline-block;
   margin-left: 25px;
+  bottom: 0;
+  left: 0;
 
   ul {
     li {

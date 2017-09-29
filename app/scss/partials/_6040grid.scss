@@ -1,10 +1,28 @@
 .m-6040grid {
-  padding-top: 100px;
+  margin-top: 100px;
   position: relative;
 
   & + .m-6040grid {
     margin-top: 0;
     padding-top: 30px;
+
+    .block6040 {
+      &:first-child {
+        &.noimage {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  &.hide-second {
+    .block6040 {
+      padding: 0 0 70px;
+
+      &:last-child {
+        display: none;
+      }
+    }
   }
 
   .block6040 {
@@ -103,7 +121,7 @@
     .block6040 {
       &.noimage {
         .text {
-          padding-top: 100px;
+          padding-top: 70px;
 
           .text-inner {
             margin: 0 0 0 80px;
@@ -128,7 +146,7 @@
         }
 
         &:last-child {
-          margin: 0 0 100px;
+          margin: 0 0 70px;
           padding: 0;
         }
       }
@@ -143,7 +161,7 @@
       }
 
       .text {
-        padding-top: 100px;
+        padding-top: 40px;
 
         .text-inner {
           margin-right: 70px;

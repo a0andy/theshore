@@ -27,6 +27,16 @@ footer {
       padding: 0 50px 30px;
 
       &.newsletter {
+        a {
+           color: $c-gold;
+           font-weight: 800;
+           text-transform: uppercase;
+           letter-spacing: 2px;
+           @include font-size(1.5, 2.5);
+           margin-bottom: 5px;
+           border-bottom: transparent;
+        }
+
         p {
           color: $c-white;
           margin-bottom: 5px;
@@ -153,22 +163,27 @@ footer {
         }
       }
 
-      h4 {
-        color: $c-gold;
-        font-weight: 800;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        @include font-size(1.5, 2.5);
-        margin-bottom: 5px;
-        font-family: $body-font;
-      }
-
       ul {
         margin: 0;
 
         li {
           &:before {
             display: none;
+          }
+
+          &:first-child {
+            a {
+              color: $c-gold;
+              font-weight: 800;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              @include font-size(1.5, 2.5);
+              margin-bottom: 5px;
+
+              &:after {
+                background: $c-gold;
+              }
+            }
           }
 
           a {
