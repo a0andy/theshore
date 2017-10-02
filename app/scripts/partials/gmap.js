@@ -1,44 +1,43 @@
 (function($, window, document) {
 
-  function initMap() {
+  function gmap() {
     var directionDisplay;
     var directionsService = new google.maps.DirectionsService();
     var map;
-    var google;
-    var maps;
 
-    function initialize() {
-      directionsDisplay = new google.maps.DirectionsRenderer();
-      var UK = new google.maps.LatLng(54.5728,-3.1139);
-      var myOptions = {
-        zoom:5,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-        center: UK
-      };
+    directionsDisplay = new google.maps.DirectionsRenderer();
+    var UK = new google.maps.LatLng(56.005184,-4.5942377);
+    var myOptions = {
+      zoom:15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      center: UK
+    };
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    directionsDisplay.setMap(map);
+    directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 
-      map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-      directionsDisplay.setMap(map);
-      directionsDisplay.setPanel(document.getElementById("directionsPanel"));
-    }
+    $('#getdirections').on('click', function(e) {
+      e.preventDefault();
 
-    function calcRoute() {
       var start = document.getElementById("start").value;
-      var end = document.getElementById("end").value;
+      var end = 'g83 8ql';
       var request = {
         origin:start,
         destination:end,
         travelMode: google.maps.DirectionsTravelMode.DRIVING
       };
-
       directionsService.route(request, function(response, status) {
         if (status == google.maps.DirectionsStatus.OK) {
           directionsDisplay.setDirections(response);
+          $('.form input').removeClass('error');
+        } else {
+          $('.form input').addClass('error');
         }
       });
-    }
+    });
   }
 
  $(function() {
-   initMap();
+   gmap();
  });
 }(window.jQuery, window, document));

@@ -16,38 +16,43 @@
 <!--@import ../_structure/_meta-->
 
 <link href="http://code.google.com/apis/maps/documentation/javascript/examples/standard.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLkRt71BW4k-77t4sPl-8rh3Fia-rlMn8"></script>
 
-<style type="text/css">
-body {
-text-align: center;
-background-color: #f3f3f3;
+<!-- <script type="text/javascript">
+var directionDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+
+function initialize() {
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var UK = new google.maps.LatLng(54.5728,-3.1139);
+  var myOptions = {
+    zoom:5,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    center: UK
+  }
+  map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  directionsDisplay.setMap(map);
+  directionsDisplay.setPanel(document.getElementById("directionsPanel"));
 }
-.container {
-width: 980px;
-margin: 10px auto;
-text-align: left;
+
+function calcRoute() {
+  var start = document.getElementById("start").value;
+  var end = document.getElementById("end").value;
+  var request = {
+    origin:start,
+    destination:end,
+    travelMode: google.maps.DirectionsTravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
 }
-#input {
-background-color: #F8F8F8;
-border: solid 1px #E8E8E8;
-float: right;
-padding:5px;
-text-align:right;
-}
-.btn
-{
-border: 1px solid #777777;
-background: #6e9e2d;
-color: white;
-font: bold 11px 'Trebuchet MS';
-padding: 4px;
-cursor: pointer;
--moz-border-radius: 4px;
--webkit-border-radius: 4px;
-border-radius: 4px;
-}
-</style>
+</script> -->
 </head>
+
 <body class='hide'>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T4X5N3M"
@@ -303,28 +308,34 @@ border-radius: 4px;
 </div>
 </section>
 
-<div class="container">
- <div id="directionsPanel"></div>
- <div id="input">
- <p><strong>Enter Your Postcode: </strong>
- <input id="start" type="text" > </p>
- <p><strong>Destination Postcode: </strong>
- <input type= "text" id="end" /> </p>
- <p><input type="button" class="btn" onClick="calcRoute();" value="View Directions"></p>
- </div>
- <div id="map_canvas" style="float:left;width:650px; height: 700px"></div>
- </div>
+<section class='m-gmap'>
+  <div class="container">
+    <div class="row">
+      <div class="map">
+        <div id="map_canvas"></div>
+
+        <div class="form">
+          <div id="input">
+            <label for="">Enter Your Postcode:</label>
+            <input id="start" type="text" >
+            <span class='errormsg'>Please enter a valid postcode</span>
+            <a href="" class='btn btn-gold' id='getdirections'>View Directions</a>
+          </div>
+        </div>
+      </div>
+      <div class="directions">
+        <div class="directions-inner">
+          <h2>Directions</h2>
+          <div id="directionsPanel"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-        <!--@import ../_structure/_footer-->
+    <!--@import ../_scripts/_globalscripts-->
+    <script src="../scripts/partials/gmap-min.js"></script>
 
-        <!--@import ../_scripts/_globalscripts-->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&sensor=true"></script>
-        <script src="../scripts/partials/gmap-min.js"></script>
-
-
-
-
-
-      </body>
-      </html>
+  </body>
+  </html>

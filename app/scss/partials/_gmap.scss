@@ -1,8 +1,99 @@
 .m-gmap {
   background: $c-lightgrey;
-  margin: 100px 0;
+  @include blockpadding();
+  @include clearfix();
 
-  #map {
-    min-height: 500px;
+  .map {
+    position: relative;
+    @include clearfix();
+    @include grid(12, 12, 12, 6);
+
+    #map_canvas {
+      width: 100%;
+      height: 500px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form {
+      background: $c-white;
+      padding: 15px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+
+      label {
+        color: $c-bodytext;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      input {
+        width: 100%;
+        margin-bottom: 15px;
+
+        &.error {
+          & + .errormsg {
+            display: block;
+          }
+        }
+      }
+
+      .errormsg {
+        margin-top: -5px;
+        margin-bottom: 10px;
+        display: none;
+        @include font-size(1.4, 1.4);
+        color: $c-errorred;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .directions {
+    @include grid(12, 12, 12, 6);
+
+    .directions-inner {
+      td {
+        &.adp-text {
+          padding: 10px 20px;
+        }
+
+        &.adp-substep {
+          padding: 5px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    .map {
+      margin-bottom: 30px;
+
+      .form {
+        margin: 0;
+        @include centre(x);
+        top: 0;
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    .row {
+      margin: 0 -35px;
+    }
+
+    .map {
+      margin-bottom: 0;
+
+      #map_canvas {
+        height: 600px;
+      }
+    }
+
+    .directions {
+      .directions-inner {
+        margin-left: 70px;
+      }
+    }
   }
 }
