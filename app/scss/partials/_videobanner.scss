@@ -24,6 +24,15 @@
   }
 
   .logo {
+    a {
+      display: block;
+      border: none!important;
+
+      &:after {
+        display: none;
+      }
+    }
+
     svg {
       @include centre(x);
       z-index: 2;

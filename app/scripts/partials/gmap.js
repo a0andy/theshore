@@ -30,6 +30,7 @@
         if (status == google.maps.DirectionsStatus.OK) {
           directionsDisplay.setDirections(response);
           $('.form input').removeClass('error');
+          $('.directionmsg').hide();
         } else {
           $('.form input').addClass('error');
         }

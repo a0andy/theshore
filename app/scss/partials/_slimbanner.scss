@@ -9,6 +9,16 @@
   overflow: hidden;
 
   .logo {
+    a {
+      display: block;
+      @include centre(both);
+      border: none!important;
+
+      &:after {
+        display: none;
+      }
+    }
+
     svg {
       @include centre(both);
       fill: $c-white;

@@ -136,6 +136,14 @@ footer {
           }
         }
 
+        .logo-container {
+          border: none!important;
+
+          &:after {
+            display: none;
+          }
+        }
+
         .logo {
           width: 140px;
           height: 80px;
