@@ -5,14 +5,6 @@
   & + .m-6040grid {
     margin-top: 0;
     padding-top: 30px;
-
-    .block6040 {
-      &:first-child {
-        &.noimage {
-          margin-top: 0;
-        }
-      }
-    }
   }
 
   &.hide-second {
@@ -29,12 +21,6 @@
     padding: 0 0 100px;
     background: $c-lightgrey;
     @include clearfix;
-
-    &:first-child {
-      &.noimage {
-        margin-top: -100px;
-      }
-    }
 
     &:last-child {
       background: $c-white;
