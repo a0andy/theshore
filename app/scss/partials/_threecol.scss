@@ -23,7 +23,7 @@
           }
         }
       }
-      
+
       a {
         &:hover {
           .item-inner {
@@ -85,7 +85,7 @@
   }
 
   .item {
-    @include grid(12, 6, 4, 4);
+    @include grid(12, 6, 6, 4);
     margin-bottom: 50px;
 
     a {
@@ -173,7 +173,9 @@
     .intro {
       padding-bottom: 35px;
     }
+  }
 
+  @media (min-width: $screen-lg) {
     .item {
       margin-bottom: 0;
     }

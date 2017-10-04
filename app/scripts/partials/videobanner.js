@@ -4,7 +4,7 @@
     if ($(window).width() > 991) {
      $(".m-videobanner .bannercta").click(function() {
        $('html, body').animate({
-         scrollTop: $(window).height(),
+         scrollTop: $('.m-videobanner').height(),
        }, 1500);
      });
     }
