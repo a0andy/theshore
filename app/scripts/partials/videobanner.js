@@ -3,8 +3,8 @@
   function ctascroll() {
     if ($(window).width() > 991) {
      $(".m-videobanner .bannercta").click(function() {
-       $('html, body').animate({
-         scrollTop: $('.m-videobanner').height(),
+       $('html').animate({
+         scrollTop: $(window).height(),
        }, 1500);
      });
     }
