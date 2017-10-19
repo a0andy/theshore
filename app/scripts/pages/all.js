@@ -74,25 +74,6 @@
     });
   }
 
-  function scrollactive() {
-    var controller = new ScrollMagic.Controller();
-
-    // loop through all elements
-    $('.scrollactive').each(function() {
-
-      // build a scene
-      var scene = new ScrollMagic.Scene({
-        triggerElement: this,
-        offset: -250
-      })
-      .setClassToggle(this, "active")
-      .addTo(controller);
-
-      var reverse = scene.reverse();
-      scene.reverse(false);
-    });
-  }
-
   function footerheight() {
     $('footer .footeritem.toprow').matchHeight();
     $('footer .footeritem.bottomrow').matchHeight();
@@ -125,7 +106,6 @@
    mainnav();
    headerform();
    footerheight();
-   scrollactive();
    calendar();
    password();
  });
