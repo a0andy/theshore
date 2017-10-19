@@ -83,6 +83,12 @@ ol li {
 p {
 	margin: 0 0 15px;
 
+	a {
+		font-weight: 600;
+		letter-spacing: normal;
+		text-transform: none;
+	}
+
 	&.preamble, .preamble {
 		@include font-size(2.0, 3.0);
 		@include font-smoothing;
