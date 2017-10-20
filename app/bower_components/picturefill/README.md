@@ -25,7 +25,7 @@ Be it browser issues, the responsive images specifications, or Picturefill itsel
 
 ```html
 <picture>
-    <source srcset="../img/sample.svg" media="(min-width: 768px)" />
+    <source srcset="../images/sample.svg" media="(min-width: 768px)" />
     <img srcset="default.png" alt="Sample pic" />
 </picture>
 ```
@@ -34,7 +34,7 @@ Be it browser issues, the responsive images specifications, or Picturefill itsel
 
 ```html
 <picture>
-    <source srcset="../img/sample.svg" media="(min-width: 768px)" />
+    <source srcset="../images/sample.svg" media="(min-width: 768px)" />
     <img srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
         alt="Sample pic" />
 </picture>

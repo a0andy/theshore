@@ -105,32 +105,32 @@ h3 {
     position: absolute;
 }
 .spark.s0 {
-    background-image: url("../img/demo_spark1.png");
+    background-image: url("../images/demo_spark1.png");
     width: 4px;
     height: 3px;
 }
 .spark.s1 {
-    background-image: url("../img/demo_spark2.png");
+    background-image: url("../images/demo_spark2.png");
     width: 6px;
     height: 6px;
 }
 .spark.s2 {
-    background-image: url("../img/demo_spark3.png");
+    background-image: url("../images/demo_spark3.png");
     width: 8px;
     height: 8px;
 }
 .spark.s3 {
-    background-image: url("../img/demo_spark4.png");
+    background-image: url("../images/demo_spark4.png");
     width: 11px;
     height: 11px;
 }
 .spark.s4 {
-    background-image: url("../img/demo_spark5.png");
+    background-image: url("../images/demo_spark5.png");
     width: 13px;
     height: 13px;
 }
 .spark.s5 {
-    background-image: url("../img/demo_spark6.png");
+    background-image: url("../images/demo_spark6.png");
     width: 17px;
     height: 17px;
 }
@@ -197,21 +197,21 @@ h3 {
     top: 50%;
     width: 100%;
     margin-top: -150px;
-    background-image: url("../img/demo_parallax_bg.png");
+    background-image: url("../images/demo_parallax_bg.png");
 }
 #parallaxbg .top {
     height: 10px;
     width: 100%;
     position: absolute;
     top: 0;
-    background-image: url("../img/demo_parallax_shadow_top.png");
+    background-image: url("../images/demo_parallax_shadow_top.png");
 }
 #parallaxbg .bottom {
     height: 10px;
     width: 100%;
     position: absolute;
     bottom: 0;
-    background-image: url("../img/demo_parallax_shadow_bottom.png");
+    background-image: url("../images/demo_parallax_shadow_bottom.png");
 }
 
 #info {
@@ -272,7 +272,7 @@ h3 {
     position: absolute;
     width: 165px;
     height: 103px;
-    background-image: url("../img/demo_bubble.png");
+    background-image: url("../images/demo_bubble.png");
     left: -118px;
     top: -24px;
     border-radius: 100%;

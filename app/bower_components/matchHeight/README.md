@@ -14,7 +14,7 @@ It handles many edge cases that cause similar plugins to fail.
 
 See the [jquery.matchHeight.js demo](http://brm.io/jquery-match-height-demo).
 
-[![jquery.matchHeight.js screenshot](http://brm.io/img/content/jquery-match-height/jquery-match-height.png)](http://brm.io/jquery-match-height-demo)
+[![jquery.matchHeight.js screenshot](http://brm.io/images/content/jquery-match-height/jquery-match-height.png)](http://brm.io/jquery-match-height-demo)
 
 ### Features
 
