@@ -2,6 +2,23 @@
   @include blockmargin;
   @include clearfix;
 
+  &.reversed {
+    @media (min-width: $screen-sm) {
+      .content-container {
+        .image {
+          float: right;
+        }
+
+        .text {
+          .text-inner {
+            margin-left: 0!important;
+            margin-right: 70px;
+          }
+        }
+      }
+    }
+  }
+
   .content-container {
     .image, .text {
       @include grid(12, 6, 6, 6);
