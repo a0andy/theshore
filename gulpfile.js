@@ -71,6 +71,8 @@ gulp.task('compress-css', function() {
 
 gulp.task('compress-image', function() {
   gulp.src('app/images/**/*')
-  .pipe(imagemin())
+  .pipe(imagemin({
+    optimizationLevel: 5,
+  }))
   .pipe(gulp.dest('app/images'));
 });
